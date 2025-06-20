@@ -30,8 +30,9 @@ urlpatterns = [
     path('notifications/', include('notifications.urls')),
     path('blood-requests/', include('blood_requests.urls')),
     path('news/', include('news.urls')),
+    path('donationuser/', include('donationuser.urls')),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
