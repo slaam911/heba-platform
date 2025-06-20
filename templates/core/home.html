@@ -1,0 +1,284 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}الرئيسية - منصة هبة{% endblock %}
+
+{% block page_styles %}
+<style>
+    body, .main-bg {
+        background: #f7f8fa !important;
+    }
+    .section-title {
+        color: #b30000;
+        font-size: 1.3rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        margin-bottom: 2.5rem;
+    }
+    .section-title i {
+        font-size: 1.5rem;
+        color: #b30000;
+    }
+    .custom-card {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px #e6e6e6;
+        border: none;
+        transition: box-shadow 0.2s, transform 0.2s;
+        padding: 1.2rem 1.1rem 1.1rem 1.1rem;
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+    }
+    .custom-card:hover {
+        box-shadow: 0 8px 32px #e0e0e0;
+        transform: translateY(-6px) scale(1.02);
+    }
+    .card-title {
+        color: #b30000;
+        font-size: 1.15rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+    }
+    .card-text, .custom-card p, .custom-card span, .custom-card i {
+        color: #444;
+        font-size: 1rem;
+    }
+    .btn-main {
+        background: #b30000;
+        color: #fff;
+        border-radius: 8px;
+        font-weight: 500;
+        padding: 0.6rem 1.5rem;
+        font-size: 1.1rem;
+        border: none;
+        transition: background 0.2s, color 0.2s;
+    }
+    .btn-main:hover, .btn-main:focus {
+        background: #800000;
+        color: #fff;
+    }
+     .btn-outline-main {
+        border: 2px solid #b30000;
+        color: #b30000;
+        background: #fff;
+        border-radius: 8px;
+        font-weight: 500;
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+        transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline-main:hover, .btn-outline-main:focus {
+        background: #b30000;
+        color: #fff;
+    }
+    .btn-details-custom {
+        background: #b30000;
+        color: #fff;
+        border-radius: 8px;
+        font-weight: 500;
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+        border: none;
+        transition: background 0.2s, color 0.2s;
+        display: inline-block;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <div class="row align-items-center justify-content-center" style="background:#fff; border-radius:18px; padding: 2.5rem 1rem; box-shadow: 0 2px 16px #e6e6e6; min-height: 220px; margin-bottom: 2.5rem;">
+        <div class="col-md-6 text-center text-md-end mb-4 mb-md-0">
+            <h1 style="color: #b30000; font-weight: 700; font-size: 2.5rem;">تبرّع بالدم، أنقذ حياة</h1>
+            <p class="lead" style="color: #444;">منصة هبة تساعدك في الوصول إلى المحتاجين للتبرع بالدم بكل سهولة وسرعة.</p>
+            <div class="mt-4">
+                <a href="{% url 'blood_requests:create' %}" class="btn btn-main me-2">
+                    <i class="fas fa-tint me-2"></i> اطلب تبرع الآن
+                </a>
+                <a href="{% url 'blood_requests:list' %}" class="btn btn-outline-main">
+                    <i class="fas fa-search me-2"></i> ابحث عن طلبات
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/blood-donation-hero.svg' %}" alt="Hero Image" class="img-fluid" style="max-height: 250px;">
+        </div>
+    </div>
+    
+    <!-- آخر طلبات التبرع بالدم -->
+    {% if latest_blood_requests %}
+    <section class="py-5">
+        <div class="container">
+            <div class="section-title mb-4"><i class="fas fa-tint"></i>جديد طلبات التبرع بالدم</div>
+            <div class="row justify-content-center">
+                {% for req in latest_blood_requests %}
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="custom-card w-100">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="ms-auto">
+                                {% if req.is_critical %}<span class="badge bg-warning text-dark">عاجل</span>{% endif %}
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="flex-grow-1">
+                                <h5 class="card-title mb-1">{{ req.patient_name }}</h5>
+                                <p class="mb-1"><i class="fas fa-hospital me-1"></i> {{ req.hospital_name }}</p>
+                                <p class="mb-1"><i class="fas fa-map-marker-alt me-1"></i> {{ req.city.name }}</p>
+                                <p class="mb-1"><i class="fas fa-tint me-1"></i> {{ req.get_blood_component_display }}</p>
+                                <p class="mb-1"><i class="fas fa-user me-1"></i> {{ req.patient_age }} سنة - {{ req.get_patient_gender_display }}</p>
+                                <p class="mb-1"><i class="fas fa-layer-group me-1"></i> {{ req.units_needed }} وحدات</p>
+                            </div>
+                            <div class="ms-3 d-flex align-items-center justify-content-center" style="min-width:70px;min-height:70px;">
+                                <span class="badge blood-type-badge" style="background:#e63946;color:#fff;font-weight:700;font-size:2.6rem;padding:0.7em 1.1em;box-shadow:0 1px 6px #e6e6e6;letter-spacing:1px;display:flex;align-items:center;justify-content:center;border-radius:10px;">{{ req.get_blood_type_display }}</span>
+                            </div>
+                        </div>
+                        <a href="{% url 'blood_requests:detail' req.request_id %}" class="btn btn-details-custom mt-2">تفاصيل الطلب</a>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12 text-center">
+                    <p class="lead">لا توجد طلبات تبرع بالدم حالياً</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="text-center mt-4">
+                <a href="{% url 'blood_requests:list' %}" class="btn btn-main btn-lg"><i class="fas fa-list me-2"></i>مشاهدة المزيد</a>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- أحدث حملات التبرع بالدم -->
+    {% if latest_campaigns %}
+    <section class="py-5">
+        <div class="container">
+            <div class="section-title mb-4"><i class="fas fa-calendar-check"></i>أحدث حملات التبرع بالدم</div>
+            <div class="row justify-content-center">
+                {% for campaign in latest_campaigns %}
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="custom-card w-100 position-relative pb-2" style="padding-top:52px;">
+                        <div class="campaign-info-bar">
+                            <span class="badge bg-light text-dark" style="font-size:0.95rem;font-weight:600;"><i class="fas fa-map-marker-alt text-danger ms-1"></i>{{ campaign.city|default:"-" }}</span>
+                            <span class="badge campaign-status-{{ campaign.get_current_status }}" style="font-size:0.95rem;">{% if campaign.get_current_status == 'upcoming' %}قادمة{% elif campaign.get_current_status == 'active' %}جارية{% elif campaign.get_current_status == 'ended' %}منتهية{% endif %}</span>
+                        </div>
+                        {% if campaign.cover_image %}
+                            <img src="{{ campaign.cover_image.url }}" class="rounded mb-3 w-100" style="height:180px; object-fit:cover; margin-top:2px;">
+                        {% else %}
+                            <img src="{% static 'img/default-avatar.png' %}" class="rounded mb-3 w-100" style="height:180px; object-fit:cover; margin-top:2px;">
+                        {% endif %}
+                        <a href="{% url 'campaigns:campaign_detail' campaign.id %}" class="card-title campaign-link">{{ campaign.title }}</a>
+                        <p class="card-text">{{ campaign.description|truncatewords:20 }}</p>
+                        <div class="my-2 text-center">
+                            <div class="fw-bold mb-1" style="color:#222; font-size:1.01rem;">تنتهي الحملة بعد:</div>
+                            <div class="campaign-timer-box"><span class="countdown-timer-campaign" data-end="{{ campaign.end_date|date:'Y-m-d\TH:i:s' }}" data-start="{{ campaign.start_date|date:'Y-m-d\TH:i:s' }}"></span></div>
+                            <div class="text-center">
+                                <a href="{% url 'campaigns:campaign_detail' campaign.id %}" class="btn btn-main campaign-details-btn">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12 text-center">
+                    <p class="lead">لا توجد حملات حالياً</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="text-center mt-4">
+                <a href="{% url 'campaigns:campaign_list' %}" class="btn btn-main">عرض جميع الحملات</a>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- آخر الأخبار -->
+    {% if latest_news_articles %}
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title mb-4"><i class="fas fa-newspaper"></i>آخر الأخبار</div>
+            <div class="row justify-content-center">
+                {% for article in latest_news_articles %}
+                <div class="col-md-4 mb-4 d-flex">
+                    <div class="custom-card w-100">
+                        <a href="{% url 'news:detail' article.pk %}">
+                            {% if article.main_image %}
+                            <img src="{{ article.main_image.url }}" class="rounded mb-3 w-100" style="height:180px; object-fit:cover;">
+                            {% else %}
+                            <img src="{% static 'img/news-default.png' %}" class="rounded mb-3 w-100" style="height:180px; object-fit:cover;">
+                            {% endif %}
+                        </a>
+                        <div class="mb-1 text-start" style="color:#888;font-size:0.95rem;"><i class="fas fa-calendar-alt me-1"></i> {{ article.publish_time|date:"Y-m-d H:i" }}</div>
+                        <a href="{% url 'news:detail' article.pk %}" class="card-title news-link">{{ article.title }}</a>
+                        <div class="card-text">{{ article.summary }}</div>
+                        <div class="mt-auto text-end d-flex justify-content-end">
+                            <a href="{% url 'news:detail' article.pk %}" class="btn btn-main">تفاصيل الخبر</a>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12 text-center">
+                    <p class="lead">لا توجد أخبار حالياً</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="text-center mt-4">
+                <a href="{% url 'news:archive' %}" class="btn btn-main btn-lg"><i class="fas fa-list me-2"></i>مشاهدة المزيد</a>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- كروت الإحصائيات -->
+    {% if total_donors is not None %}
+    <section class="py-5">
+        <div class="container">
+            <div class="section-title mb-4"><i class="fas fa-chart-bar"></i>إحصائيات المنصة</div>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <i class="fas fa-users"></i>
+                        <h3 class="card-title">{{ total_donors }}</h3>
+                        <p class="card-text">متبرع مسجل</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <i class="fas fa-hand-holding-medical"></i>
+                        <h3 class="card-title">{{ total_donations }}</h3>
+                        <p class="card-text">طلبات التبرع</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3 class="card-title">{{ total_campaigns }}</h3>
+                        <p class="card-text">حملة تبرع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- كن جزءاً من مجتمع المتبرعين -->
+    <section class="cta-section my-5">
+        <div class="container">
+            <h2 class="mb-4"><i class="fas fa-heartbeat me-2"></i>كن جزءاً من مجتمع المتبرعين</h2>
+            <p class="lead mb-4">ساعدنا في إنقاذ الأرواح من خلال التبرع بالدم</p>
+            {% if not user.is_authenticated %}
+                <a href="{% url 'users:register' %}" class="btn btn-cta-join btn-lg">انضم إلينا الآن</a>
+            {% else %}
+                <a href="{% url 'blood_requests:list' %}" class="btn btn-main btn-lg">تبرع الآن</a>
+            {% endif %}
+        </div>
+    </section>
+
+</div>
+{% endblock %}

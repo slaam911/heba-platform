@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}تم إرسال طلبك بنجاح - منصة هبة{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow text-center p-4">
+                <div class="mb-4">
+                    <img src="{% static 'img/success.svg' %}" alt="تم الإرسال" style="width: 80px;">
+                </div>
+                <h2 class="mb-3 text-success">تم إرسال طلبك بنجاح!</h2>
+                <p class="mb-4">شكرًا لك على تقديم طلب احتياج تبرع بالدم.<br>سيتم مراجعة طلبك من قبل المشرفين خلال وقت قصير.</p>
+                <div class="alert alert-info mb-4">
+                    <strong>رابط تتبع الطلب:</strong><br>
+                    <a href="{% url 'blood_requests:detail' request.request_id %}" class="fw-bold">{{ request.build_absolute_uri|default:request.request_id }}</a>
+                </div>
+                <p class="text-danger mb-2">
+                    يرجى الاحتفاظ بهذا الرابط لمتابعة حالة طلبك.<br>
+                    لن تتمكن من الوصول للطلب لاحقًا إلا عبر هذا الرابط الفريد.
+                </p>
+                <a href="/" class="btn btn-outline-primary mt-3">العودة للصفحة الرئيسية</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

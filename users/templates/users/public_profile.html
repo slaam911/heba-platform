@@ -1,0 +1,169 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+.profile-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px #e6e6e6;
+    padding: 2.5rem 2rem 2rem 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    position: relative;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #b30000;
+    box-shadow: 0 2px 12px #eee;
+    margin-bottom: 0.7rem;
+}
+.profile-badges {
+    margin: 0.7rem 0 1.2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.badge-item {
+    background: #f7f8fa;
+    color: #b30000;
+    border-radius: 8px;
+    padding: 0.3rem 0.9rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1.5px solid #b30000;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.profile-section-title {
+    color: #b30000;
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.profile-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.2rem 0;
+}
+.profile-info-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1.07rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.profile-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.profile-social a {
+    color: #fff;
+    background: #b30000;
+    border-radius: 8px;
+    padding: 0.2rem 0.8rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.profile-social a:hover {
+    background: #800000;
+}
+.profile-stats {
+    background: #f7f8fa;
+    border-radius: 10px;
+    padding: 1.2rem 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+.profile-stat {
+    text-align: center;
+    flex: 1 1 120px;
+}
+.profile-stat .stat-label {
+    color: #b30000;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+.profile-stat .stat-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+}
+@media (max-width: 767px) {
+    .profile-card { padding: 1.2rem 0.5rem; }
+    .profile-stats { flex-direction: column; gap: 0.7rem; }
+}
+</style>
+<div class="profile-card position-relative">
+    {% if request.user == profile_user %}
+        <a href="{% url 'users:profile_edit' profile_user.username %}" class="btn btn-outline-main position-absolute" style="left: 30px; top: 30px;z-index:2;"><i class="fas fa-edit"></i> تعديل البيانات</a>
+    {% endif %}
+    <div class="text-center mb-3">
+        {% if profile_user.avatar %}
+            <img src="{{ profile_user.avatar.url }}" class="profile-avatar" alt="الصورة الرمزية">
+        {% else %}
+            <img src="{% static 'img/default-avatar.png' %}" class="profile-avatar" alt="الصورة الرمزية">
+        {% endif %}
+        <h2 class="fw-bold mb-1" style="color:#b30000;">{{ profile_user.get_full_name|default:profile_user.username }}</h2>
+        <div class="text-muted mb-2">@{{ profile_user.username }}</div>
+        {% if profile_user.badges and profile_user.badges.items %}
+        <div class="profile-badges">
+            {% for key, badge in profile_user.badges.items %}
+                <span class="badge-item"><i class="fas fa-medal"></i> {{ badge }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <div class="profile-section-title"><i class="fas fa-user"></i>المعلومات الشخصية</div>
+    <ul class="profile-info-list">
+        <li><i class="fas fa-envelope"></i> {{ profile_user.email }}</li>
+        <li><i class="fas fa-phone"></i> {{ profile_user.phone_number }}</li>
+        {% if profile_user.age %}<li><i class="fas fa-birthday-cake"></i> العمر: {{ profile_user.age }}</li>{% endif %}
+        {% if profile_user.gender %}<li><i class="fas fa-venus-mars"></i> الجنس: {{ profile_user.get_gender_display }}</li>{% endif %}
+    </ul>
+    <div class="profile-section-title"><i class="fas fa-map-marker-alt"></i>الموقع</div>
+    <ul class="profile-info-list">
+        <li><i class="fas fa-globe"></i> المنطقة: {{ profile_user.get_region_display }}</li>
+        {% if profile_user.city %}<li><i class="fas fa-city"></i> المدينة: {{ profile_user.city }}</li>{% endif %}
+        {% if profile_user.district %}<li><i class="fas fa-home"></i> الحي: {{ profile_user.district }}</li>{% endif %}
+    </ul>
+    <div class="profile-section-title"><i class="fas fa-lock"></i>الخصوصية</div>
+    <ul class="profile-info-list">
+        <li><i class="fas fa-user-shield"></i> مستوى الخصوصية: {{ profile_user.get_privacy_display }}</li>
+    </ul>
+    <div class="profile-section-title"><i class="fas fa-info-circle"></i>نبذة</div>
+    <div class="bg-light p-2 rounded mb-3">{{ profile_user.bio|linebreaksbr }}</div>
+    <div class="profile-section-title"><i class="fas fa-share-alt"></i>روابط التواصل</div>
+    <div class="profile-social">
+        {% if profile_user.social_accounts %}
+            {% for key, value in profile_user.social_accounts.items %}
+                <a href="{{ value }}" target="_blank"><i class="fab fa-{{ key }} fa-lg"></i> {{ key|title }}</a>
+            {% endfor %}
+        {% else %}
+            <span class="text-muted">لا توجد روابط</span>
+        {% endif %}
+    </div>
+    <div class="profile-section-title"><i class="fas fa-link"></i>رابط الملف التعريفي</div>
+    <div class="input-group mb-2">
+        <input type="text" class="form-control" readonly value="{{ request.build_absolute_uri }}">
+        <button class="btn btn-outline-primary" type="button" onclick="navigator.clipboard.writeText('{{ request.build_absolute_uri }}');this.innerText='تم النسخ!'">نسخ</button>
+    </div>
+</div>
+{% endblock %} 

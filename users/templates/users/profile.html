@@ -1,0 +1,200 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}الملف الشخصي - منصة هبة{% endblock %}
+{% block content %}
+<style>
+.profile-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px #e6e6e6;
+    padding: 2.5rem 2rem 2rem 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    position: relative;
+}
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #b30000;
+    box-shadow: 0 2px 12px #eee;
+    margin-bottom: 0.7rem;
+}
+.profile-verified {
+    color: #25D366;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.profile-badges {
+    margin: 0.7rem 0 1.2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.badge-item {
+    background: #f7f8fa;
+    color: #b30000;
+    border-radius: 8px;
+    padding: 0.3rem 0.9rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1.5px solid #b30000;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.profile-section-title {
+    color: #b30000;
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.profile-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.2rem 0;
+}
+.profile-info-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1.07rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.profile-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.profile-social a {
+    color: #fff;
+    background: #b30000;
+    border-radius: 8px;
+    padding: 0.2rem 0.8rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.profile-social a:hover {
+    background: #800000;
+}
+.profile-stats {
+    background: #f7f8fa;
+    border-radius: 10px;
+    padding: 1.2rem 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+.profile-stat {
+    text-align: center;
+    flex: 1 1 120px;
+}
+.profile-stat .stat-label {
+    color: #b30000;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+.profile-stat .stat-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+}
+@media (max-width: 767px) {
+    .profile-card { padding: 1.2rem 0.5rem; }
+    .profile-stats { flex-direction: column; gap: 0.7rem; }
+}
+</style>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="profile-card position-relative">
+            {% if user.is_verified %}
+                <span class="profile-verified" title="عضو موثّق"><i class="fas fa-badge-check"></i></span>
+            {% endif %}
+            <div class="text-center mb-3">
+                <img src="{{ user.get_avatar_url }}" class="profile-avatar" alt="الصورة الرمزية">
+                <h2 class="fw-bold mb-1" style="color:#b30000;">{{ user.get_full_name|default:user.username }}</h2>
+                <div class="text-muted mb-2">@{{ user.username }}</div>
+                {% if user.badges %}
+                <div class="profile-badges">
+                    {% for key, badge in user.badges.items %}
+                        <span class="badge-item"><i class="fas fa-medal"></i> {{ badge }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="profile-section-title"><i class="fas fa-user"></i>المعلومات الشخصية</div>
+                    <ul class="profile-info-list">
+                        <li><i class="fas fa-envelope"></i> {{ user.email }}</li>
+                        <li><i class="fas fa-phone"></i> {{ user.phone_number }}</li>
+                        {% if user.age %}<li><i class="fas fa-birthday-cake"></i> العمر: {{ user.age }}</li>{% endif %}
+                        {% if user.gender %}<li><i class="fas fa-venus-mars"></i> الجنس: {{ user.get_gender_display }}</li>{% endif %}
+                        {% if user.nationality %}<li><i class="fas fa-flag"></i> الجنسية: {{ user.get_nationality_display }}</li>{% endif %}
+                    </ul>
+                    <div class="profile-section-title"><i class="fas fa-map-marker-alt"></i>الموقع</div>
+                    <ul class="profile-info-list">
+                        <li><i class="fas fa-globe"></i> المنطقة: {{ user.get_region_display }}</li>
+                        {% if user.city %}<li><i class="fas fa-city"></i> المدينة: {{ user.city }}</li>{% endif %}
+                        {% if user.district %}<li><i class="fas fa-home"></i> الحي: {{ user.district }}</li>{% endif %}
+                    </ul>
+                    <div class="profile-section-title"><i class="fas fa-lock"></i>الخصوصية</div>
+                    <ul class="profile-info-list">
+                        <li><i class="fas fa-user-shield"></i> مستوى الخصوصية: {{ user.get_privacy_display }}</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-section-title"><i class="fas fa-heartbeat"></i>معلومات التبرع والصحة</div>
+                    <ul class="profile-info-list">
+                        <li><i class="fas fa-tint"></i> فصيلة الدم: {{ user.blood_type }}</li>
+                        <li><i class="fas fa-sync-alt"></i> عدد مرات التبرع: {{ user.donation_count }}</li>
+                        {% if user.has_donated %}<li><i class="fas fa-hospital"></i> بنك الدم السابق: {{ user.previous_blood_bank }}</li>{% endif %}
+                        {% if user.has_chronic_disease %}<li><i class="fas fa-notes-medical"></i> مرض مزمن: {{ user.chronic_disease_type }}</li>{% endif %}
+                    </ul>
+                    <div class="profile-section-title"><i class="fas fa-share-alt"></i>حسابات التواصل</div>
+                    <div class="profile-social">
+                        {% if user.social_accounts %}
+                            {% for key, value in user.social_accounts.items %}
+                                <a href="{{ value }}" target="_blank"><i class="fab fa-{{ key|lower }}"></i> {{ key|title }}</a>
+                            {% endfor %}
+                        {% else %}
+                            <span class="text-muted">لا يوجد حسابات مضافة</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="profile-stats mt-4">
+                <div class="profile-stat">
+                    <div class="stat-label">تاريخ التسجيل</div>
+                    <div class="stat-value">{{ user.date_joined|date:"Y/m/d" }}</div>
+                </div>
+                <div class="profile-stat">
+                    <div class="stat-label">آخر دخول</div>
+                    <div class="stat-value">{{ user.last_login|date:"Y/m/d H:i" }}</div>
+                </div>
+                <div class="profile-stat">
+                    <div class="stat-label">الحالة</div>
+                    <div class="stat-value">
+                        {% if user.is_verified %}<span class="text-success fw-bold">تم التحقق</span>{% else %}<span class="text-danger fw-bold">غير محقق</span>{% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="{% url 'users:profile_edit' user.username %}" class="btn btn-outline-main px-4 py-2">تعديل الملف الشخصي</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

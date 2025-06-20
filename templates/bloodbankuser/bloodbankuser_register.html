@@ -1,0 +1,84 @@
+{% extends 'core/base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}تسجيل بنك دم - منصة هبة{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white text-center py-4">
+                    <h4 class="mb-0 fw-bold text-danger">تسجيل بنك دم جديد</h4>
+                    <p class="text-muted mb-0">يرجى تعبئة جميع البيانات بدقة</p>
+                </div>
+                <div class="card-body p-4">
+                    <form method="post" class="needs-validation" novalidate>
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 mb-3">{{ form.username.label_tag }}{{ form.username|add_class:'form-control' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.email.label_tag }}{{ form.email|add_class:'form-control' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.password1.label_tag }}{{ form.password1|add_class:'form-control' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.password2.label_tag }}{{ form.password2|add_class:'form-control' }}</div>
+                        </div>
+                        <h5 class="mb-3 mt-4 fw-bold text-danger">معلومات بنك الدم</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">{{ form.bloodbank_name.label_tag }}{{ form.bloodbank_name|add_class:'form-control' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.hospital_name.label_tag }}{{ form.hospital_name|add_class:'form-control' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.region.label_tag }}{{ form.region|add_class:'form-select' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.city.label_tag }}{{ form.city|add_class:'form-select' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.contact_number.label_tag }}{{ form.contact_number|add_class:'form-control' }}</div>
+                            <div class="col-md-12 mb-3">
+                                {{ form.address.label_tag }}
+                                <input type="text" name="address" id="id_address" class="form-control" value="{{ form.address.value|default_if_none:'' }}" required>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <label class="form-label fw-bold">تحديد موقع بنك الدم على الخريطة</label>
+                                <div id="map" style="height: 350px; border-radius: 10px; border: 1px solid #ddd;"></div>
+                                {{ form.map_location }}
+                            </div>
+                            <div class="col-md-6 mb-3">{{ form.working_hours.label_tag }}{{ form.working_hours|add_class:'form-control' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.special_instructions.label_tag }}{{ form.special_instructions|add_class:'form-control' }}</div>
+                        </div>
+                        <h5 class="mb-3 mt-4 fw-bold text-danger">معلومات مسؤول بنك الدم</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">{{ form.manager_name.label_tag }}{{ form.manager_name|add_class:'form-control' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.manager_phone.label_tag }}{{ form.manager_phone|add_class:'form-control' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.manager_email.label_tag }}{{ form.manager_email|add_class:'form-control' }}</div>
+                            <div class="col-md-6 mb-3">{{ form.manager_position.label_tag }}{{ form.manager_position|add_class:'form-control' }}</div>
+                        </div>
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-danger btn-lg">إرسال الطلب</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+<script>
+function initMap() {
+    var defaultLocation = { lat: 24.7136, lng: 46.6753 }; // الرياض
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: defaultLocation,
+        zoom: 7
+    });
+    var marker = new google.maps.Marker({
+        position: defaultLocation,
+        map: map,
+        draggable: true
+    });
+    function updateLocationField() {
+        var pos = marker.getPosition();
+        document.getElementById('id_map_location').value = pos.lat() + ',' + pos.lng();
+    }
+    marker.addListener('dragend', updateLocationField);
+    updateLocationField();
+}
+</script>
+{% endblock %} 

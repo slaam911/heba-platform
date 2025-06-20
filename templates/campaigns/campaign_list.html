@@ -1,0 +1,88 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}حملات التبرع بالدم{% endblock %}
+{% block content %}
+<style>
+.campaign-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #e6e6e6;
+    border: none;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+    margin-bottom: 2rem;
+}
+.campaign-card:hover {
+    box-shadow: 0 8px 32px #e0e0e0;
+    transform: translateY(-6px) scale(1.03);
+}
+.campaign-cover {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+}
+.campaign-status-upcoming { color: #007bff; font-weight: bold; }
+.campaign-status-active { color: #28a745; font-weight: bold; }
+.campaign-status-ended { color: #dc3545; font-weight: bold; }
+.campaign-status-draft { color: #888; font-weight: bold; }
+.campaign-status-cancelled { color: #b30000; font-weight: bold; }
+</style>
+<div class="container py-4">
+    <h2 class="mb-4 fw-bold text-center text-danger">حملات التبرع بالدم</h2>
+    <form method="get" class="row g-3 mb-4 justify-content-center">
+        <div class="col-md-3">
+            <select name="city" class="form-select">
+                <option value="">كل المدن</option>
+                {% for c in cities %}
+                    <option value="{{ c }}" {% if selected_city == c %}selected{% endif %}>{{ c }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select name="status" class="form-select">
+                <option value="">كل الحالات</option>
+                <option value="upcoming" {% if selected_status == 'upcoming' %}selected{% endif %}>قادمة</option>
+                <option value="active" {% if selected_status == 'active' %}selected{% endif %}>جارية</option>
+                <option value="ended" {% if selected_status == 'ended' %}selected{% endif %}>منتهية</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-danger w-100">تصفية</button>
+        </div>
+    </form>
+    <div class="row">
+        {% for campaign in campaigns|slice:":6" %}
+        <div class="col-md-6 col-lg-4">
+            <div class="campaign-card mb-4">
+                {% if campaign.cover_image %}
+                    <img src="{{ campaign.cover_image.url }}" class="campaign-cover" alt="صورة الحملة">
+                {% else %}
+                    <img src="{% static 'img/default-avatar.png' %}" class="campaign-cover" alt="صورة الحملة">
+                {% endif %}
+                <div class="p-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge campaign-status-{{ campaign.get_current_status }}">
+                            {% if campaign.get_current_status == 'upcoming' %}قادمة{% elif campaign.get_current_status == 'active' %}جارية{% elif campaign.get_current_status == 'ended' %}منتهية{% elif campaign.get_current_status == 'draft' %}مسودة{% elif campaign.get_current_status == 'cancelled' %}ملغاة{% endif %}
+                        </span>
+                        <span class="text-muted small"><i class="fas fa-calendar-alt"></i> {{ campaign.start_date|date:"Y/m/d" }}</span>
+                    </div>
+                    <h5 class="fw-bold mb-2">{{ campaign.title }}</h5>
+                    <div class="mb-2"><i class="fas fa-map-marker-alt text-danger"></i> {{ campaign.city|default:"-" }}</div>
+                    <a href="{% url 'campaigns:campaign_detail' campaign.pk %}" class="btn btn-outline-danger w-100">تفاصيل الحملة</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center">
+            <div class="alert alert-info">لا توجد حملات متاحة حالياً.</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% if campaigns|length > 6 %}
+    <div class="text-center mt-4">
+        <a href="?" class="btn btn-danger btn-lg px-5">عرض جميع الحملات</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %} 

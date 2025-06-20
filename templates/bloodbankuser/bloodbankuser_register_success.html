@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block title %}تم التسجيل بنجاح - بنك الدم{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm text-center">
+                <div class="card-body py-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle fa-4x text-success"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3 text-success">تم إنشاء حساب بنك الدم بنجاح!</h3>
+                    <p class="text-muted mb-4">سيتم مراجعة طلبكم من قبل الإدارة، وسيتم إشعاركم عند اعتماد العضوية.</p>
+                    <a href="{% url 'bloodbankuser:bloodbankuser_login' %}" class="btn btn-outline-primary btn-lg">دخول بنك الدم</a>
+                    <a href="/" class="btn btn-link">العودة للصفحة الرئيسية</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

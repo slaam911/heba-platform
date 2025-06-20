@@ -1,0 +1,92 @@
+{% extends 'core/base.html' %}
+
+{% block title %}اختيار نوع التسجيل - منصة هبة{% endblock %}
+
+{% block extra_css %}
+<style>
+.select-type-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: none; */
+}
+.custom-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px #e6e6e6;
+    border: none;
+    transition: box-shadow 0.2s, transform 0.2s;
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+    min-width: 320px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.custom-card:hover {
+    box-shadow: 0 8px 32px #e0e0e0;
+    transform: translateY(-6px) scale(1.03);
+}
+.custom-card .icon {
+    font-size: 3.5rem;
+    color: #b30000;
+    margin-bottom: 1.2rem;
+}
+.btn-cta-join {
+    background: #fff;
+    color: #b30000;
+    border: 2px solid #b30000;
+    border-radius: 18px;
+    font-weight: bold;
+    transition: all 0.25s;
+    box-shadow: none;
+    font-size: 1.1rem;
+}
+.btn-cta-join:hover, .btn-cta-join:focus {
+    background: #b30000;
+    color: #fff;
+    border-color: #b30000;
+    transform: scale(1.04);
+}
+.btn-main {
+    background: #b30000;
+    color: #fff;
+    border-radius: 18px;
+    font-weight: bold;
+    border: 2px solid #b30000;
+    font-size: 1.1rem;
+    transition: all 0.25s;
+}
+.btn-main:hover, .btn-main:focus {
+    background: #8c0000;
+    color: #fff;
+    border-color: #8c0000;
+    transform: scale(1.04);
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container select-type-section">
+    <div class="row justify-content-center w-100">
+        <div class="col-md-5 d-flex justify-content-end mb-4 mb-md-0">
+            <div class="custom-card text-center w-100">
+                <i class="fas fa-user-plus icon"></i>
+                <h4 class="card-title mb-3">تسجيل عضوية متبرع بالدم</h4>
+                <p class="card-text mb-4">انضم إلى مجتمع المتبرعين وساهم في إنقاذ الأرواح</p>
+                <a href="{% url 'users:register' %}" class="btn btn-cta-join btn-lg w-100 mt-auto">تسجيل متبرع</a>
+            </div>
+        </div>
+        <div class="col-md-5 d-flex justify-content-start">
+            <div class="custom-card text-center w-100">
+                <i class="fas fa-hospital-symbol icon"></i>
+                <h4 class="card-title mb-3">تسجيل عضوية بنك دم</h4>
+                <p class="card-text mb-4">سجّل بنك الدم الخاص بك وساهم في تسهيل الوصول للمتبرعين</p>
+                <a href="{% url 'bloodbankuser:bloodbankuser_register' %}" class="btn btn-main btn-lg w-100 mt-auto">تسجيل بنك دم</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

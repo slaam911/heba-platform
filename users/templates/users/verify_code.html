@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+
+{% block title %}التحقق من الحساب{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">التحقق من الحساب</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-4">
+                        {% if user.verification_method == 'email' %}
+                            تم إرسال رمز التحقق إلى بريدك الإلكتروني: {{ user.email }}
+                        {% else %}
+                            تم إرسال رمز التحقق إلى رقم هاتفك: {{ user.phone_number }}
+                        {% endif %}
+                    </p>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        {% if form.non_field_errors %}
+                            <div class="alert alert-danger">
+                                {% for error in form.non_field_errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        
+                        <div class="form-group">
+                            {{ form.code.label_tag }}
+                            {{ form.code }}
+                            {% if form.code.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.code.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary">تحقق</button>
+                            <a href="{% url 'resend_code' %}" class="btn btn-secondary">إعادة إرسال الرمز</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

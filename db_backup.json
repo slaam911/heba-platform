@@ -1,0 +1,3004 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "users",
+    "model": "city"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "users",
+    "model": "sitesettings"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "users",
+    "model": "customuser"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "users",
+    "model": "verificationcode"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "campaigns",
+    "model": "campaign"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "blood_donation",
+    "model": "bloodrequest"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "notifications",
+    "model": "notification"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "users",
+    "model": "bloodbankprofile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "users",
+    "model": "bloodbankuser"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "blood_requests",
+    "model": "bloodrequest"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "news",
+    "model": "newssection"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "news",
+    "model": "newsattachment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "news",
+    "model": "newsarticle"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "sitestyle"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "bloodbankuser",
+    "model": "bloodbankuser"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0121sj2gog5brxjp53hdxbhczwo0nwje",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEwnYK4dO83kBkeUjWQlHZl_HfbpAvd3nPOfQtP61L82tPspyguQovT78YUnqnuID6o3psMrS7zxHJX5EG7vLWYXtfD_Tso1MtWM4yEmmw2YHVGDGxGCHZIA2Q2sDEX0XJSTsWEGhmdUZoY6Bx4CFl8vtiVN-Y:1uQZjt:XgNjcOt8tZkaQ0NccffEIImNdnYQeY3sHfEz1uNJ3lE",
+    "expire_date": "2025-06-28T22:52:41.627Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8sed743x817gzsbtc6u97ac4nnyh5f3b",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEwnYK4dO83kBkeUjWQlHZl_HfbpAvd3nPOfQtP61L82tPspyguQovT78YUnqnuID6o3psMrS7zxHJX5EG7vLWYXtfD_Tso1MtWM4yEmmw2YHVGDGxGCHZIA2Q2sDEX0XJSTsWEGhmdUZoY6Bx4CFl8vtiVN-Y:1uQIYR:dUcoc1LKQv-rDkIdCG2Cp3w1q6bwOlWD5L25H3WyKGE",
+    "expire_date": "2025-06-28T04:31:43.912Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ze7w345yc5vteshtcjrfdhhitbelzato",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEwnYK4dO83kBkeUjWQlHZl_HfbpAvd3nPOfQtP61L82tPspyguQovT78YUnqnuID6o3psMrS7zxHJX5EG7vLWYXtfD_Tso1MtWM4yEmmw2YHVGDGxGCHZIA2Q2sDEX0XJSTsWEGhmdUZoY6Bx4CFl8vtiVN-Y:1uPJnu:meNLroKaAPzgKOJVQGxjNsOWsfbIkKzmYmZp5lyU80k",
+    "expire_date": "2025-06-25T11:39:38.574Z"
+  }
+},
+{
+  "model": "core.sitestyle",
+  "pk": 3,
+  "fields": {
+    "main_color": "#b30000",
+    "secondary_color": "#fff",
+    "background_color": "#f7f8fa",
+    "navbar_color": "#b30000",
+    "navbar_text_color": "#fff",
+    "footer_color": "#1a2940",
+    "footer_text_color": "#fff",
+    "card_radius": "18px",
+    "card_shadow": "0 2px 16px #e6e6e6",
+    "button_radius": "18px",
+    "button_shadow": "none",
+    "button_hover_color": "#8c0000",
+    "text_color": "#222",
+    "muted_text_color": "#888",
+    "heading_font": "'Tajawal', sans-serif",
+    "body_font": "'Tajawal', sans-serif",
+    "border_color": "#e6e6e6",
+    "link_color": "#b30000",
+    "link_hover_color": "#8c0000",
+    "success_color": "#28a745",
+    "warning_color": "#ffc107",
+    "danger_color": "#dc3545",
+    "info_color": "#17a2b8",
+    "border_radius_global": "18px"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 1,
+  "fields": {
+    "name": "الرياض",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 2,
+  "fields": {
+    "name": "الدرعية",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 3,
+  "fields": {
+    "name": "الخرج",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 4,
+  "fields": {
+    "name": "الزلفي",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 5,
+  "fields": {
+    "name": "شقراء",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 6,
+  "fields": {
+    "name": "مكة المكرمة",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 7,
+  "fields": {
+    "name": "جدة",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 8,
+  "fields": {
+    "name": "الطائف",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 9,
+  "fields": {
+    "name": "رابغ",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 10,
+  "fields": {
+    "name": "المدينة المنورة",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 11,
+  "fields": {
+    "name": "ينبع",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.297Z",
+    "updated_at": "2025-06-11T13:31:01.297Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 12,
+  "fields": {
+    "name": "العلا",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 13,
+  "fields": {
+    "name": "بدر",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 14,
+  "fields": {
+    "name": "الدمام",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 15,
+  "fields": {
+    "name": "الخبر",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 16,
+  "fields": {
+    "name": "القطيف",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 17,
+  "fields": {
+    "name": "الأحساء",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 18,
+  "fields": {
+    "name": "أبها",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 19,
+  "fields": {
+    "name": "خميس مشيط",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 20,
+  "fields": {
+    "name": "بيشة",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 21,
+  "fields": {
+    "name": "محايل عسير",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 22,
+  "fields": {
+    "name": "تبوك",
+    "region": "tabuk",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 23,
+  "fields": {
+    "name": "الوجه",
+    "region": "tabuk",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 24,
+  "fields": {
+    "name": "أملج",
+    "region": "tabuk",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 25,
+  "fields": {
+    "name": "حقل",
+    "region": "tabuk",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 26,
+  "fields": {
+    "name": "حائل",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 27,
+  "fields": {
+    "name": "بقعاء",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 28,
+  "fields": {
+    "name": "الغزالة",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 29,
+  "fields": {
+    "name": "الشنان",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 30,
+  "fields": {
+    "name": "عرعر",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 31,
+  "fields": {
+    "name": "رفحاء",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.298Z",
+    "updated_at": "2025-06-11T13:31:01.298Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 32,
+  "fields": {
+    "name": "طريف",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 33,
+  "fields": {
+    "name": "جازان",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 34,
+  "fields": {
+    "name": "صبيا",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 35,
+  "fields": {
+    "name": "أبو عريش",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 36,
+  "fields": {
+    "name": "صامطة",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 37,
+  "fields": {
+    "name": "نجران",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 38,
+  "fields": {
+    "name": "شرورة",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 39,
+  "fields": {
+    "name": "حبونا",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 40,
+  "fields": {
+    "name": "الباحة",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 41,
+  "fields": {
+    "name": "بلجرشي",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 42,
+  "fields": {
+    "name": "المندق",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 43,
+  "fields": {
+    "name": "سكاكا",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 44,
+  "fields": {
+    "name": "دومة الجندل",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 45,
+  "fields": {
+    "name": "القريات",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 46,
+  "fields": {
+    "name": "بريدة",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 47,
+  "fields": {
+    "name": "عنيزة",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 48,
+  "fields": {
+    "name": "الرس",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 49,
+  "fields": {
+    "name": "المذنب",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:31:01.299Z",
+    "updated_at": "2025-06-11T13:31:01.299Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 50,
+  "fields": {
+    "name": "الدلم",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.655Z",
+    "updated_at": "2025-06-11T13:57:58.655Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 51,
+  "fields": {
+    "name": "حوطة بني تميم",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.656Z",
+    "updated_at": "2025-06-11T13:57:58.656Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 52,
+  "fields": {
+    "name": "الأفلاج",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.656Z",
+    "updated_at": "2025-06-11T13:57:58.656Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 53,
+  "fields": {
+    "name": "وادي الدواسر",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.656Z",
+    "updated_at": "2025-06-11T13:57:58.656Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 54,
+  "fields": {
+    "name": "السليل",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.656Z",
+    "updated_at": "2025-06-11T13:57:58.656Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 55,
+  "fields": {
+    "name": "الغاط",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.657Z",
+    "updated_at": "2025-06-11T13:57:58.657Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 56,
+  "fields": {
+    "name": "المجمعة",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.657Z",
+    "updated_at": "2025-06-11T13:57:58.657Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 57,
+  "fields": {
+    "name": "رماح",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.657Z",
+    "updated_at": "2025-06-11T13:57:58.657Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 58,
+  "fields": {
+    "name": "ثادق",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.657Z",
+    "updated_at": "2025-06-11T13:57:58.657Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 59,
+  "fields": {
+    "name": "حريملاء",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.657Z",
+    "updated_at": "2025-06-11T13:57:58.657Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 60,
+  "fields": {
+    "name": "مرات",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.658Z",
+    "updated_at": "2025-06-11T13:57:58.658Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 61,
+  "fields": {
+    "name": "عفيف",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.658Z",
+    "updated_at": "2025-06-11T13:57:58.658Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 62,
+  "fields": {
+    "name": "ضرما",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.658Z",
+    "updated_at": "2025-06-11T13:57:58.658Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 63,
+  "fields": {
+    "name": "المزاحمية",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.658Z",
+    "updated_at": "2025-06-11T13:57:58.658Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 64,
+  "fields": {
+    "name": "القويعية",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.658Z",
+    "updated_at": "2025-06-11T13:57:58.658Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 65,
+  "fields": {
+    "name": "الحريق",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.658Z",
+    "updated_at": "2025-06-11T13:57:58.658Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 66,
+  "fields": {
+    "name": "رغبة",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.658Z",
+    "updated_at": "2025-06-11T13:57:58.658Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 67,
+  "fields": {
+    "name": "الرويضة",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.659Z",
+    "updated_at": "2025-06-11T13:57:58.659Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 68,
+  "fields": {
+    "name": "ديراب",
+    "region": "riyadh",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.659Z",
+    "updated_at": "2025-06-11T13:57:58.659Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 69,
+  "fields": {
+    "name": "البكيرية",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.659Z",
+    "updated_at": "2025-06-11T13:57:58.659Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 70,
+  "fields": {
+    "name": "البدائع",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.659Z",
+    "updated_at": "2025-06-11T13:57:58.659Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 71,
+  "fields": {
+    "name": "رياض الخبراء",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.660Z",
+    "updated_at": "2025-06-11T13:57:58.660Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 72,
+  "fields": {
+    "name": "عقلة الصقور",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.660Z",
+    "updated_at": "2025-06-11T13:57:58.660Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 73,
+  "fields": {
+    "name": "عيون الجواء",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.660Z",
+    "updated_at": "2025-06-11T13:57:58.660Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 74,
+  "fields": {
+    "name": "الشماسية",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.660Z",
+    "updated_at": "2025-06-11T13:57:58.660Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 75,
+  "fields": {
+    "name": "النبهانية",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.660Z",
+    "updated_at": "2025-06-11T13:57:58.660Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 76,
+  "fields": {
+    "name": "ضرية",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.660Z",
+    "updated_at": "2025-06-11T13:57:58.660Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 77,
+  "fields": {
+    "name": "الأسياح",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.660Z",
+    "updated_at": "2025-06-11T13:57:58.660Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 78,
+  "fields": {
+    "name": "الفوارة",
+    "region": "qassim",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.661Z",
+    "updated_at": "2025-06-11T13:57:58.661Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 79,
+  "fields": {
+    "name": "الظهران",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.661Z",
+    "updated_at": "2025-06-11T13:57:58.661Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 80,
+  "fields": {
+    "name": "حفر الباطن",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.661Z",
+    "updated_at": "2025-06-11T13:57:58.661Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 81,
+  "fields": {
+    "name": "الجبيل",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.661Z",
+    "updated_at": "2025-06-11T13:57:58.661Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 82,
+  "fields": {
+    "name": "رأس تنورة",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.662Z",
+    "updated_at": "2025-06-11T13:57:58.662Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 83,
+  "fields": {
+    "name": "بقيق",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.662Z",
+    "updated_at": "2025-06-11T13:57:58.662Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 84,
+  "fields": {
+    "name": "النعيرية",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.662Z",
+    "updated_at": "2025-06-11T13:57:58.662Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 85,
+  "fields": {
+    "name": "قرية العليا",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.662Z",
+    "updated_at": "2025-06-11T13:57:58.662Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 86,
+  "fields": {
+    "name": "الخفجي",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.662Z",
+    "updated_at": "2025-06-11T13:57:58.662Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 87,
+  "fields": {
+    "name": "صفوى",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.662Z",
+    "updated_at": "2025-06-11T13:57:58.662Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 88,
+  "fields": {
+    "name": "سيهات",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.663Z",
+    "updated_at": "2025-06-11T13:57:58.663Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 89,
+  "fields": {
+    "name": "العوامية",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.663Z",
+    "updated_at": "2025-06-11T13:57:58.663Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 90,
+  "fields": {
+    "name": "تاروت",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.663Z",
+    "updated_at": "2025-06-11T13:57:58.663Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 91,
+  "fields": {
+    "name": "سلوى",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.663Z",
+    "updated_at": "2025-06-11T13:57:58.663Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 92,
+  "fields": {
+    "name": "عريعرة",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.663Z",
+    "updated_at": "2025-06-11T13:57:58.663Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 93,
+  "fields": {
+    "name": "بطحاء",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.663Z",
+    "updated_at": "2025-06-11T13:57:58.663Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 94,
+  "fields": {
+    "name": "ابو حدرية",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.664Z",
+    "updated_at": "2025-06-11T13:57:58.664Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 95,
+  "fields": {
+    "name": "الصرار",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.664Z",
+    "updated_at": "2025-06-11T13:57:58.664Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 96,
+  "fields": {
+    "name": "حرض",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.664Z",
+    "updated_at": "2025-06-11T13:57:58.664Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 97,
+  "fields": {
+    "name": "شدقم",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.664Z",
+    "updated_at": "2025-06-11T13:57:58.664Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 98,
+  "fields": {
+    "name": "عين دار",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.664Z",
+    "updated_at": "2025-06-11T13:57:58.664Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 99,
+  "fields": {
+    "name": "ابو معن",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.665Z",
+    "updated_at": "2025-06-11T13:57:58.665Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 100,
+  "fields": {
+    "name": "ابو شامي",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.665Z",
+    "updated_at": "2025-06-11T13:57:58.665Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 101,
+  "fields": {
+    "name": "ابو قير",
+    "region": "eastern",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.665Z",
+    "updated_at": "2025-06-11T13:57:58.665Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 102,
+  "fields": {
+    "name": "موقق",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.666Z",
+    "updated_at": "2025-06-11T13:57:58.666Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 103,
+  "fields": {
+    "name": "الحائط",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.666Z",
+    "updated_at": "2025-06-11T13:57:58.666Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 104,
+  "fields": {
+    "name": "السليمي",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.666Z",
+    "updated_at": "2025-06-11T13:57:58.666Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 105,
+  "fields": {
+    "name": "الشملي",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.666Z",
+    "updated_at": "2025-06-11T13:57:58.666Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 106,
+  "fields": {
+    "name": "سميراء",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.667Z",
+    "updated_at": "2025-06-11T13:57:58.667Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 107,
+  "fields": {
+    "name": "تربة",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.667Z",
+    "updated_at": "2025-06-11T13:57:58.667Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 108,
+  "fields": {
+    "name": "جبة",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.667Z",
+    "updated_at": "2025-06-11T13:57:58.667Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 109,
+  "fields": {
+    "name": "روضة",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.667Z",
+    "updated_at": "2025-06-11T13:57:58.667Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 110,
+  "fields": {
+    "name": "الروضة",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.668Z",
+    "updated_at": "2025-06-11T13:57:58.668Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 111,
+  "fields": {
+    "name": "القاعد",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.668Z",
+    "updated_at": "2025-06-11T13:57:58.668Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 112,
+  "fields": {
+    "name": "الاجفر",
+    "region": "hail",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.668Z",
+    "updated_at": "2025-06-11T13:57:58.668Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 113,
+  "fields": {
+    "name": "النماص",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.668Z",
+    "updated_at": "2025-06-11T13:57:58.668Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 114,
+  "fields": {
+    "name": "أحد رفيدة",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.669Z",
+    "updated_at": "2025-06-11T13:57:58.669Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 115,
+  "fields": {
+    "name": "ظهران الجنوب",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.669Z",
+    "updated_at": "2025-06-11T13:57:58.669Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 116,
+  "fields": {
+    "name": "سراة عبيدة",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.669Z",
+    "updated_at": "2025-06-11T13:57:58.669Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 117,
+  "fields": {
+    "name": "تثليث",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.669Z",
+    "updated_at": "2025-06-11T13:57:58.669Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 118,
+  "fields": {
+    "name": "رجال ألمع",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.669Z",
+    "updated_at": "2025-06-11T13:57:58.669Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 119,
+  "fields": {
+    "name": "بلقرن",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.670Z",
+    "updated_at": "2025-06-11T13:57:58.670Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 120,
+  "fields": {
+    "name": "المجاردة",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.670Z",
+    "updated_at": "2025-06-11T13:57:58.670Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 121,
+  "fields": {
+    "name": "بارق",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.670Z",
+    "updated_at": "2025-06-11T13:57:58.670Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 122,
+  "fields": {
+    "name": "البرك",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.670Z",
+    "updated_at": "2025-06-11T13:57:58.670Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 123,
+  "fields": {
+    "name": "تنومة",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.670Z",
+    "updated_at": "2025-06-11T13:57:58.670Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 124,
+  "fields": {
+    "name": "بللسمر",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.670Z",
+    "updated_at": "2025-06-11T13:57:58.670Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 125,
+  "fields": {
+    "name": "بللحمر",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.671Z",
+    "updated_at": "2025-06-11T13:57:58.671Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 126,
+  "fields": {
+    "name": "الحريضة",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.671Z",
+    "updated_at": "2025-06-11T13:57:58.671Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 127,
+  "fields": {
+    "name": "الشعف",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.671Z",
+    "updated_at": "2025-06-11T13:57:58.671Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 128,
+  "fields": {
+    "name": "الواديين",
+    "region": "asir",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.671Z",
+    "updated_at": "2025-06-11T13:57:58.671Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 129,
+  "fields": {
+    "name": "بيش",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.672Z",
+    "updated_at": "2025-06-11T13:57:58.672Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 130,
+  "fields": {
+    "name": "الدرب",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.672Z",
+    "updated_at": "2025-06-11T13:57:58.672Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 131,
+  "fields": {
+    "name": "الحرث",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.672Z",
+    "updated_at": "2025-06-11T13:57:58.672Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 132,
+  "fields": {
+    "name": "الريث",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.672Z",
+    "updated_at": "2025-06-11T13:57:58.672Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 133,
+  "fields": {
+    "name": "العارضة",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.673Z",
+    "updated_at": "2025-06-11T13:57:58.673Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 134,
+  "fields": {
+    "name": "ضمد",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.673Z",
+    "updated_at": "2025-06-11T13:57:58.673Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 135,
+  "fields": {
+    "name": "فرسان",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.673Z",
+    "updated_at": "2025-06-11T13:57:58.673Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 136,
+  "fields": {
+    "name": "الطوال",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.673Z",
+    "updated_at": "2025-06-11T13:57:58.673Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 137,
+  "fields": {
+    "name": "هروب",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.673Z",
+    "updated_at": "2025-06-11T13:57:58.673Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 138,
+  "fields": {
+    "name": "العيدابي",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.673Z",
+    "updated_at": "2025-06-11T13:57:58.673Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 139,
+  "fields": {
+    "name": "فيفاء",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.674Z",
+    "updated_at": "2025-06-11T13:57:58.674Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 140,
+  "fields": {
+    "name": "الدائر",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.674Z",
+    "updated_at": "2025-06-11T13:57:58.674Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 141,
+  "fields": {
+    "name": "الشقيري",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.674Z",
+    "updated_at": "2025-06-11T13:57:58.674Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 142,
+  "fields": {
+    "name": "الموسم",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.674Z",
+    "updated_at": "2025-06-11T13:57:58.674Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 143,
+  "fields": {
+    "name": "مزهرة",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.674Z",
+    "updated_at": "2025-06-11T13:57:58.674Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 144,
+  "fields": {
+    "name": "القحمة",
+    "region": "jazan",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.674Z",
+    "updated_at": "2025-06-11T13:57:58.674Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 145,
+  "fields": {
+    "name": "بدر الجنوب",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.675Z",
+    "updated_at": "2025-06-11T13:57:58.675Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 146,
+  "fields": {
+    "name": "يدمة",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.675Z",
+    "updated_at": "2025-06-11T13:57:58.675Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 147,
+  "fields": {
+    "name": "ثار",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.675Z",
+    "updated_at": "2025-06-11T13:57:58.675Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 148,
+  "fields": {
+    "name": "خباش",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.675Z",
+    "updated_at": "2025-06-11T13:57:58.675Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 149,
+  "fields": {
+    "name": "بئر عسكر",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.676Z",
+    "updated_at": "2025-06-11T13:57:58.676Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 150,
+  "fields": {
+    "name": "المشعلية",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.676Z",
+    "updated_at": "2025-06-11T13:57:58.676Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 151,
+  "fields": {
+    "name": "الحصينية",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.676Z",
+    "updated_at": "2025-06-11T13:57:58.676Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 152,
+  "fields": {
+    "name": "الوديعة",
+    "region": "najran",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.676Z",
+    "updated_at": "2025-06-11T13:57:58.676Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 153,
+  "fields": {
+    "name": "الجموم",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.676Z",
+    "updated_at": "2025-06-11T13:57:58.676Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 154,
+  "fields": {
+    "name": "خليص",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.677Z",
+    "updated_at": "2025-06-11T13:57:58.677Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 155,
+  "fields": {
+    "name": "الكامل",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.677Z",
+    "updated_at": "2025-06-11T13:57:58.677Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 156,
+  "fields": {
+    "name": "الليث",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.677Z",
+    "updated_at": "2025-06-11T13:57:58.677Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 157,
+  "fields": {
+    "name": "القنفذة",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.677Z",
+    "updated_at": "2025-06-11T13:57:58.677Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 158,
+  "fields": {
+    "name": "الخرمة",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.677Z",
+    "updated_at": "2025-06-11T13:57:58.677Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 159,
+  "fields": {
+    "name": "رنية",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.677Z",
+    "updated_at": "2025-06-11T13:57:58.677Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 160,
+  "fields": {
+    "name": "تربة",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.678Z",
+    "updated_at": "2025-06-11T13:57:58.678Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 161,
+  "fields": {
+    "name": "المويه",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.678Z",
+    "updated_at": "2025-06-11T13:57:58.678Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 162,
+  "fields": {
+    "name": "أضم",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.678Z",
+    "updated_at": "2025-06-11T13:57:58.678Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 163,
+  "fields": {
+    "name": "ميسان",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.678Z",
+    "updated_at": "2025-06-11T13:57:58.678Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 164,
+  "fields": {
+    "name": "بحرة",
+    "region": "makkah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.678Z",
+    "updated_at": "2025-06-11T13:57:58.678Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 165,
+  "fields": {
+    "name": "البدع",
+    "region": "tabuk",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.679Z",
+    "updated_at": "2025-06-11T13:57:58.679Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 166,
+  "fields": {
+    "name": "تيماء",
+    "region": "tabuk",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.679Z",
+    "updated_at": "2025-06-11T13:57:58.679Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 167,
+  "fields": {
+    "name": "ضباء",
+    "region": "tabuk",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.679Z",
+    "updated_at": "2025-06-11T13:57:58.679Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 168,
+  "fields": {
+    "name": "بئر بن هرماس",
+    "region": "tabuk",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.679Z",
+    "updated_at": "2025-06-11T13:57:58.679Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 169,
+  "fields": {
+    "name": "الزيته",
+    "region": "tabuk",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.679Z",
+    "updated_at": "2025-06-11T13:57:58.679Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 170,
+  "fields": {
+    "name": "ابو راكة",
+    "region": "tabuk",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.679Z",
+    "updated_at": "2025-06-11T13:57:58.679Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 171,
+  "fields": {
+    "name": "طبرجل",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.680Z",
+    "updated_at": "2025-06-11T13:57:58.680Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 172,
+  "fields": {
+    "name": "الحديثة",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.680Z",
+    "updated_at": "2025-06-11T13:57:58.680Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 173,
+  "fields": {
+    "name": "الناصفة",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.680Z",
+    "updated_at": "2025-06-11T13:57:58.680Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 174,
+  "fields": {
+    "name": "الرديفة",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.680Z",
+    "updated_at": "2025-06-11T13:57:58.680Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 175,
+  "fields": {
+    "name": "الشويحطية",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.680Z",
+    "updated_at": "2025-06-11T13:57:58.680Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 176,
+  "fields": {
+    "name": "صوير",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.680Z",
+    "updated_at": "2025-06-11T13:57:58.680Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 177,
+  "fields": {
+    "name": "زلوم",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.681Z",
+    "updated_at": "2025-06-11T13:57:58.681Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 178,
+  "fields": {
+    "name": "اللقائط",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.681Z",
+    "updated_at": "2025-06-11T13:57:58.681Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 179,
+  "fields": {
+    "name": "المرير",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.681Z",
+    "updated_at": "2025-06-11T13:57:58.681Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 180,
+  "fields": {
+    "name": "النبك ابو قصر",
+    "region": "jawf",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.681Z",
+    "updated_at": "2025-06-11T13:57:58.681Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 181,
+  "fields": {
+    "name": "المخواة",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.681Z",
+    "updated_at": "2025-06-11T13:57:58.681Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 182,
+  "fields": {
+    "name": "العقيق",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.682Z",
+    "updated_at": "2025-06-11T13:57:58.682Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 183,
+  "fields": {
+    "name": "القرى",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.682Z",
+    "updated_at": "2025-06-11T13:57:58.682Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 184,
+  "fields": {
+    "name": "غامد الزناد",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.682Z",
+    "updated_at": "2025-06-11T13:57:58.682Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 185,
+  "fields": {
+    "name": "الحجرة",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.682Z",
+    "updated_at": "2025-06-11T13:57:58.682Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 186,
+  "fields": {
+    "name": "بني حسن",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.683Z",
+    "updated_at": "2025-06-11T13:57:58.683Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 187,
+  "fields": {
+    "name": "بالجرشي",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.683Z",
+    "updated_at": "2025-06-11T13:57:58.683Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 188,
+  "fields": {
+    "name": "بالشهم",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.683Z",
+    "updated_at": "2025-06-11T13:57:58.683Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 189,
+  "fields": {
+    "name": "الشعراء",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.683Z",
+    "updated_at": "2025-06-11T13:57:58.683Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 190,
+  "fields": {
+    "name": "ناوان",
+    "region": "bahah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.683Z",
+    "updated_at": "2025-06-11T13:57:58.683Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 191,
+  "fields": {
+    "name": "خيبر",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.684Z",
+    "updated_at": "2025-06-11T13:57:58.684Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 192,
+  "fields": {
+    "name": "الحناكية",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.684Z",
+    "updated_at": "2025-06-11T13:57:58.684Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 193,
+  "fields": {
+    "name": "المهد",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.684Z",
+    "updated_at": "2025-06-11T13:57:58.684Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 194,
+  "fields": {
+    "name": "وادي الفرع",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.684Z",
+    "updated_at": "2025-06-11T13:57:58.684Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 195,
+  "fields": {
+    "name": "الفريش",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.684Z",
+    "updated_at": "2025-06-11T13:57:58.684Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 196,
+  "fields": {
+    "name": "الفقرة",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.685Z",
+    "updated_at": "2025-06-11T13:57:58.685Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 197,
+  "fields": {
+    "name": "ابو ضباع",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.685Z",
+    "updated_at": "2025-06-11T13:57:58.685Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 198,
+  "fields": {
+    "name": "اليتمة",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.685Z",
+    "updated_at": "2025-06-11T13:57:58.685Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 199,
+  "fields": {
+    "name": "الضميرية",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.685Z",
+    "updated_at": "2025-06-11T13:57:58.685Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 200,
+  "fields": {
+    "name": "المسيجيد",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.685Z",
+    "updated_at": "2025-06-11T13:57:58.685Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 201,
+  "fields": {
+    "name": "الحسو",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.685Z",
+    "updated_at": "2025-06-11T13:57:58.685Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 202,
+  "fields": {
+    "name": "سليلة جهينة",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.686Z",
+    "updated_at": "2025-06-11T13:57:58.686Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 203,
+  "fields": {
+    "name": "الرايس",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.686Z",
+    "updated_at": "2025-06-11T13:57:58.686Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 204,
+  "fields": {
+    "name": "الفقعلي",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.686Z",
+    "updated_at": "2025-06-11T13:57:58.686Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 205,
+  "fields": {
+    "name": "النجف",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.686Z",
+    "updated_at": "2025-06-11T13:57:58.686Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 206,
+  "fields": {
+    "name": "الشفية",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.686Z",
+    "updated_at": "2025-06-11T13:57:58.686Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 207,
+  "fields": {
+    "name": "الابرق",
+    "region": "madinah",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.686Z",
+    "updated_at": "2025-06-11T13:57:58.686Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 208,
+  "fields": {
+    "name": "العويقيلة",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.687Z",
+    "updated_at": "2025-06-11T13:57:58.687Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 209,
+  "fields": {
+    "name": "القيصومة",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.687Z",
+    "updated_at": "2025-06-11T13:57:58.687Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 210,
+  "fields": {
+    "name": "شعبة نصاب",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.687Z",
+    "updated_at": "2025-06-11T13:57:58.687Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 211,
+  "fields": {
+    "name": "لينة",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.687Z",
+    "updated_at": "2025-06-11T13:57:58.687Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 212,
+  "fields": {
+    "name": "ام رضمة",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.687Z",
+    "updated_at": "2025-06-11T13:57:58.687Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 213,
+  "fields": {
+    "name": "الهباس",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.688Z",
+    "updated_at": "2025-06-11T13:57:58.688Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 214,
+  "fields": {
+    "name": "الدويد",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.688Z",
+    "updated_at": "2025-06-11T13:57:58.688Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 215,
+  "fields": {
+    "name": "الحدقة",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.688Z",
+    "updated_at": "2025-06-11T13:57:58.688Z"
+  }
+},
+{
+  "model": "users.city",
+  "pk": 216,
+  "fields": {
+    "name": "الحدود الشمالية",
+    "region": "northern_border",
+    "is_active": true,
+    "created_at": "2025-06-11T13:57:58.688Z",
+    "updated_at": "2025-06-11T13:57:58.688Z"
+  }
+},
+{
+  "model": "users.bloodbankprofile",
+  "pk": 1,
+  "fields": {
+    "bloodbank_name": "بنك الدم المركزي بالخرج",
+    "hospital_name": "مستشفى الملك خالد بالخرج",
+    "region": "riyadh",
+    "city": 3,
+    "contact_number": "0115444444",
+    "address": "الخرج - حي الخالدية - طريق الأمير محمد بن سلمان",
+    "map_location": null,
+    "working_hours": "8am",
+    "special_instructions": "",
+    "manager_name": "عبدالله",
+    "manager_phone": "0115444444",
+    "manager_email": "0115444444@moh.gov.sa",
+    "manager_position": "مشرف بنك الدم",
+    "is_approved": true,
+    "created_at": "2025-06-11T15:12:25.943Z",
+    "updated_at": "2025-06-11T15:12:25.943Z"
+  }
+},
+{
+  "model": "blood_requests.bloodrequest",
+  "pk": 1,
+  "fields": {
+    "patient_name": "عبدالسلام العنزي",
+    "medical_file_number": "12345",
+    "hospital_name": "مستشفى الملك خالد بالخرج",
+    "city": 3,
+    "blood_type": "A+",
+    "blood_component": "plasma",
+    "patient_age": 10,
+    "patient_gender": "male",
+    "units_needed": 4,
+    "is_critical": true,
+    "contact_number": "0567003775",
+    "additional_info": "المريض يعاني من نزيف حاد",
+    "medical_report": "",
+    "request_id": "3c02e9f4-614c-4557-a460-ff5a0fc6f752",
+    "status": "approved",
+    "created_at": "2025-06-13T01:16:16.514Z",
+    "updated_at": "2025-06-14T19:06:15.858Z",
+    "expires_at": "2025-06-20T01:46:33Z",
+    "rejection_reason": "الحالة غير معروفه - الرجال التواصل معنا"
+  }
+},
+{
+  "model": "blood_requests.bloodrequest",
+  "pk": 2,
+  "fields": {
+    "patient_name": "سلام السلام",
+    "medical_file_number": "12345",
+    "hospital_name": "مستشفى وادي الدواسر",
+    "city": 53,
+    "blood_type": "O-",
+    "blood_component": "whole",
+    "patient_age": 12,
+    "patient_gender": "female",
+    "units_needed": 5,
+    "is_critical": true,
+    "contact_number": "0115444444",
+    "additional_info": "المريض لديه عملية عاجلة في الرأس",
+    "medical_report": "",
+    "request_id": "22c94103-d8fe-48ae-87cb-2c9dc8a55fe1",
+    "status": "approved",
+    "created_at": "2025-06-13T01:51:27.690Z",
+    "updated_at": "2025-06-13T01:52:05.496Z",
+    "expires_at": "2025-06-25T01:52:04Z",
+    "rejection_reason": ""
+  }
+},
+{
+  "model": "blood_requests.bloodrequest",
+  "pk": 3,
+  "fields": {
+    "patient_name": "سلطان الحربي",
+    "medical_file_number": "2345666756",
+    "hospital_name": "مستشفى عرعر المركزي",
+    "city": 30,
+    "blood_type": "O-",
+    "blood_component": "platelets",
+    "patient_age": 31,
+    "patient_gender": "female",
+    "units_needed": 4,
+    "is_critical": true,
+    "contact_number": "0567003775",
+    "additional_info": "المريضة لديها عملية ولادة قيصرية",
+    "medical_report": "",
+    "request_id": "24760477-8c38-4117-b6d6-c6df4206af8c",
+    "status": "approved",
+    "created_at": "2025-06-13T03:40:04.408Z",
+    "updated_at": "2025-06-13T03:40:46.151Z",
+    "expires_at": "2025-06-29T03:40:38Z",
+    "rejection_reason": ""
+  }
+},
+{
+  "model": "blood_requests.bloodrequest",
+  "pk": 4,
+  "fields": {
+    "patient_name": "خلود القحطاني",
+    "medical_file_number": "984769",
+    "hospital_name": "مستشفى أبها العام",
+    "city": 18,
+    "blood_type": "AB-",
+    "blood_component": "whole",
+    "patient_age": 50,
+    "patient_gender": "female",
+    "units_needed": 2,
+    "is_critical": true,
+    "contact_number": "0567003775",
+    "additional_info": "المريضة لديها نزيف مستمر",
+    "medical_report": "",
+    "request_id": "0172d637-b942-4cf6-8e62-2c6f4c6f47f3",
+    "status": "approved",
+    "created_at": "2025-06-13T03:43:50.875Z",
+    "updated_at": "2025-06-14T17:48:19.026Z",
+    "expires_at": "2025-06-26T03:43:48Z",
+    "rejection_reason": ""
+  }
+},
+{
+  "model": "blood_requests.bloodrequest",
+  "pk": 5,
+  "fields": {
+    "patient_name": "حصة الدوسري",
+    "medical_file_number": "345678",
+    "hospital_name": "مدينة الملك فهد الطبية",
+    "city": 1,
+    "blood_type": "B+",
+    "blood_component": "whole",
+    "patient_age": 32,
+    "patient_gender": "female",
+    "units_needed": 3,
+    "is_critical": true,
+    "contact_number": "0567003775",
+    "additional_info": "المريض يحتاج دم لعملية عاجلة",
+    "medical_report": "",
+    "request_id": "0ab9b322-2e2e-4939-802e-8b6c41439756",
+    "status": "approved",
+    "created_at": "2025-06-13T03:47:10.170Z",
+    "updated_at": "2025-06-13T03:47:10.170Z",
+    "expires_at": "2025-07-03T03:47:04Z",
+    "rejection_reason": ""
+  }
+},
+{
+  "model": "blood_requests.bloodrequest",
+  "pk": 6,
+  "fields": {
+    "patient_name": "سعود الدعجاني",
+    "medical_file_number": "783984",
+    "hospital_name": "الملك فيصل التخصصي",
+    "city": 7,
+    "blood_type": "O+",
+    "blood_component": "platelets",
+    "patient_age": 34,
+    "patient_gender": "male",
+    "units_needed": 8,
+    "is_critical": true,
+    "contact_number": "٠567003775",
+    "additional_info": "المريض لديه سرطان دم ويحتاج صفائح دموية عاجلة",
+    "medical_report": "",
+    "request_id": "efe747e2-9916-430a-b648-7a852642dd74",
+    "status": "approved",
+    "created_at": "2025-06-13T03:49:44.522Z",
+    "updated_at": "2025-06-14T17:51:32.976Z",
+    "expires_at": "2025-07-31T03:49:42Z",
+    "rejection_reason": ""
+  }
+},
+{
+  "model": "blood_requests.bloodrequest",
+  "pk": 7,
+  "fields": {
+    "patient_name": "سعيد الزهراني",
+    "medical_file_number": "1342344",
+    "hospital_name": "مستشفى الباحة",
+    "city": 40,
+    "blood_type": "AB+",
+    "blood_component": "whole",
+    "patient_age": 10,
+    "patient_gender": "male",
+    "units_needed": 2,
+    "is_critical": true,
+    "contact_number": "0123456789",
+    "additional_info": "المريض تعرض لحادث مروري ولديه عملية",
+    "medical_report": "",
+    "request_id": "e60c29fd-f6a3-43db-b13f-674ed8fe459a",
+    "status": "approved",
+    "created_at": "2025-06-13T17:15:55.161Z",
+    "updated_at": "2025-06-14T19:07:13.714Z",
+    "expires_at": "2025-06-30T19:07:12Z",
+    "rejection_reason": ""
+  }
+},
+{
+  "model": "blood_requests.bloodrequest",
+  "pk": 8,
+  "fields": {
+    "patient_name": "نورة الدوسري",
+    "medical_file_number": "12344",
+    "hospital_name": "مستشفى السليل العام",
+    "city": 54,
+    "blood_type": "O+",
+    "blood_component": "whole",
+    "patient_age": 28,
+    "patient_gender": "female",
+    "units_needed": 2,
+    "is_critical": true,
+    "contact_number": "0567003775",
+    "additional_info": "المريضة مقرر لها عملية ولادة قيصرية عاجله",
+    "medical_report": "",
+    "request_id": "5d8dd01c-cf4a-4bd5-9ad6-cf60ffeda7ab",
+    "status": "approved",
+    "created_at": "2025-06-14T15:34:20.969Z",
+    "updated_at": "2025-06-14T15:34:20.969Z",
+    "expires_at": "2025-06-30T15:34:05Z",
+    "rejection_reason": ""
+  }
+},
+{
+  "model": "blood_requests.bloodrequest",
+  "pk": 9,
+  "fields": {
+    "patient_name": "بدر محمد",
+    "medical_file_number": "2435353",
+    "hospital_name": "م. الولادة والأطفال بالخرج",
+    "city": 3,
+    "blood_type": "O+",
+    "blood_component": "whole",
+    "patient_age": 37,
+    "patient_gender": "male",
+    "units_needed": 3,
+    "is_critical": true,
+    "contact_number": "0567889998",
+    "additional_info": "المريض لديه عملية طارئة",
+    "medical_report": "",
+    "request_id": "4a33db05-17bb-4405-ae8d-b948bdccaf99",
+    "status": "approved",
+    "created_at": "2025-06-14T20:24:52.780Z",
+    "updated_at": "2025-06-14T20:26:40.182Z",
+    "expires_at": "2025-06-21T20:26:38Z",
+    "rejection_reason": ""
+  }
+},
+{
+  "model": "news.newssection",
+  "pk": 1,
+  "fields": {
+    "name": "أخبار هبه",
+    "description": "قسم لأخر أخبار منصه هبه",
+    "icon": "news/sections/Logo-1536x1536.png",
+    "status": "active",
+    "target_audience": "",
+    "priority": 5,
+    "related_campaign": null,
+    "created_at": "2025-06-13T17:49:57.748Z",
+    "updated_at": "2025-06-14T01:35:20.570Z"
+  }
+},
+{
+  "model": "news.newssection",
+  "pk": 2,
+  "fields": {
+    "name": "مبادرات وحملات هِبَة",
+    "description": "تغطية شاملة للحملات الميدانية، الفعاليات المجتمعية، ومبادرات التبرع بالدم",
+    "icon": "news/sections/hml_ltbr_bldm.jpg",
+    "status": "active",
+    "target_audience": "",
+    "priority": 3,
+    "related_campaign": null,
+    "created_at": "2025-06-14T01:29:12.763Z",
+    "updated_at": "2025-06-14T01:39:46.944Z"
+  }
+},
+{
+  "model": "news.newssection",
+  "pk": 3,
+  "fields": {
+    "name": "مقالات توعوية",
+    "description": "مقالات وإرشادات طبية من مختصين، تسلط الضوء على أهمية وفوائد التبرع بالدم",
+    "icon": "news/sections/2041935.jpeg",
+    "status": "active",
+    "target_audience": "",
+    "priority": 2,
+    "related_campaign": null,
+    "created_at": "2025-06-14T01:34:08.943Z",
+    "updated_at": "2025-06-14T01:34:45.768Z"
+  }
+},
+{
+  "model": "news.newssection",
+  "pk": 4,
+  "fields": {
+    "name": "جديد بنوك الدم",
+    "description": "أخبار متعلقة بالبنوك الشريكة: حملات، مبادرات مجتمعية، إنجازات، إعلانات، وأوقات العمل.",
+    "icon": "news/sections/hml_ltbr_bldm_ZB3cyfp.jpg",
+    "status": "active",
+    "target_audience": "",
+    "priority": 4,
+    "related_campaign": null,
+    "created_at": "2025-06-14T01:39:39.826Z",
+    "updated_at": "2025-06-14T01:39:39.826Z"
+  }
+},
+{
+  "model": "news.newssection",
+  "pk": 5,
+  "fields": {
+    "name": "إنفوجرافيك هِبَة",
+    "description": "تصاميم بصرية مبسطة تُقدم معلومات طبية وتوعوية حول أهمية وفوائد التبرع بالدم.",
+    "icon": "news/sections/pngtree-hand-drawn-creative-vector-love-blood-donation-day-png-image_2182864.jpg",
+    "status": "active",
+    "target_audience": "",
+    "priority": 1,
+    "related_campaign": null,
+    "created_at": "2025-06-14T02:37:43.613Z",
+    "updated_at": "2025-06-14T02:37:43.613Z"
+  }
+},
+{
+  "model": "news.newsarticle",
+  "pk": 1,
+  "fields": {
+    "section": 1,
+    "title": "إطلاق منصة \"هبة\" الذكية: خطوة نوعية لتعزيز التبرع بالدم في المملكة",
+    "subtitle": "\"ربط فوري مع بنوك الدم وتنبيهات ذكية لتشجيع التبرع المنتظم\"",
+    "summary": "منصة \"هِبَة\" تنطلق رسميًا لتسهيل التبرع بالدم رقميًا عبر حجز المواعيد، إشعارات ذكية، وتوثيق إلكتروني. تهدف لرفع التبرع الطوعي بنسبة 30٪ ودعم بنوك الدم باحترافية وكفاءة.",
+    "content": "أطلقت اليوم منصة \"هِبَة\" الإلكترونية رسميًا كأول منصة سعودية مبتكرة تُعنى بتنظيم وتسهيل عمليات التبرع بالدم، وذلك بحضور نخبة من مسؤولي الصحة وممثلي القطاعات غير الربحية.\r\n\r\nوتُعد المنصة نقلة نوعية في مجال التحول الرقمي الصحي، إذ تمكّن المتبرعين من تسجيل بياناتهم بسهولة، حجز مواعيد التبرع في أقرب بنك دم، تلقي إشعارات دورية، وتوثيق سجل تبرعاتهم بطريقة رقمية وآمنة.\r\n\r\nوتتيح \"هِبَة\" كذلك للجهات الصحية تتبع الاحتياج الفعلي من فصائل الدم في مختلف المناطق، مما يسهم في سد الفجوات وزيادة كفاءة الاستجابة للحالات الحرجة.\r\n\r\nوأكدت المؤسس لمنصة \"هبه\" عبدالسلام العنزي أن المنصة تم تصميمها لتكون مرنة وسهلة الاستخدام، مع دعم للربط الفوري مع بنوك الدم المعتمدة، ومشاركة الحملات التوعوية عبر مختلف القنوات الرقمية.\r\n\r\nمن المتوقع أن تسهم المنصة في رفع معدلات التبرع الطوعي بنسبة تفوق 30٪ خلال العام الأول، خاصة مع إمكانية إشراك المتبرعين في الحملات الميدانية، وتكريم أصحاب العطاء المستمر، مما يعكس روح التكافل المجتمعي الذي تسعى \"هِبَة\" إلى تعزيزه.",
+    "main_image": "news/articles/pngtree-hand-drawn-creative-vector-love-blood-donation-day-png-image_2182864.jpg",
+    "status": "published",
+    "publish_time": "2025-06-13T17:58:59Z",
+    "created_at": "2025-06-13T18:00:20.303Z",
+    "updated_at": "2025-06-13T18:00:20.303Z"
+  }
+},
+{
+  "model": "news.newsarticle",
+  "pk": 2,
+  "fields": {
+    "section": 2,
+    "title": "\"هِبَة\" تطلق أولى حملاتها الميدانية للتبرع بالدم بالرياض",
+    "subtitle": "بالتعاون مع بنك الدم المركزي وضمن جهودها لتعزيز التبرع الطوعي",
+    "summary": "منصة \"هِبَة\" تُطلق أولى حملاتها الميدانية للتبرع بالدم بالرياض بالتعاون مع بنك الدم المركزي، لمدة 5 أيام، ضمن مبادراتها المجتمعية لتعزيز التبرع الطوعي وسد احتياج المراكز الصحية.",
+    "content": "أعلنت منصة \"هِبَة\" الرقمية عن انطلاق أولى حملاتها الميدانية للتبرع بالدم، والتي تقام في مدينة الرياض لمدة خمسة أيام، بالتعاون مع بنك الدم المركزي بمنطقة الرياض.\r\n\r\nوتهدف الحملة إلى تعزيز ثقافة التبرع الطوعي، وتوفير وحدات دم آمنة تسهم في دعم المرضى والمراكز الصحية التي تواجه احتياجًا مستمرًا.\r\n\r\nوتأتي هذه المبادرة في إطار التوسع العملي لأنشطة المنصة بعد تدشينها مؤخرًا، حيث تم تجهيز موقع الحملة بفريق طبي متخصص، وتجهيزات حديثة تضمن تجربة تبرع ميسّرة وسريعة للمتبرعين، إلى جانب توفير خدمة التسجيل المسبق عبر المنصة الإلكترونية.\r\n\r\nوأكدت إدارة منصة \"هِبَة\" أن الحملة تأتي ضمن سلسلة مبادرات إنسانية ومجتمعية تسعى إلى بناء جسور بين المتبرعين والمحتاجين، وتحقيق التوازن في وفرة الدم بمناطق المملكة، مشيرةً إلى أن المشاركين في الحملة سيتمكنون من توثيق تبرعهم إلكترونيًا والاستفادة من الخدمات الذكية التي تقدمها المنصة.\r\n\r\nوتستقبل الحملة المتبرعين من الساعة 4 عصرًا حتى 10 مساءً، وسط بيئة منظمة تراعي أعلى معايير السلامة والجودة، مع تقديم شهادات شكر ورمزية للمشاركين.",
+    "main_image": "news/articles/12.jpg",
+    "status": "published",
+    "publish_time": "2025-06-13T18:19:00Z",
+    "created_at": "2025-06-13T18:19:30.107Z",
+    "updated_at": "2025-06-14T01:42:15.245Z"
+  }
+},
+{
+  "model": "news.newsarticle",
+  "pk": 3,
+  "fields": {
+    "section": 1,
+    "title": "\"هِبَة\" و \"بنك الدم المركزي\" بالرياض يوقعان اتفاقية تعاون لتعزيز التبرع الرقمي",
+    "subtitle": "بهدف تطوير الخدمات، تنظيم الحملات، وتوسيع قاعدة المتبرعين بالمملكة",
+    "summary": "وقعت منصة \"هِبَة\" اتفاقية تعاون مع بنك الدم المركزي بالرياض لتطوير التبرع الرقمي، تشمل حملات ميدانية، ربط بيانات، وتنبيهات ذكية، ضمن جهود تعزيز التبرع الطوعي والاستجابة الفعالة للاحتياج.",
+    "content": "وقّعت منصة \"هِبَة\" الإلكترونية اتفاقية شراكة استراتيجية مع بنك الدم المركزي بمنطقة الرياض، تهدف إلى تطوير وتوسيع آليات التبرع بالدم في المملكة عبر حلول رقمية مبتكرة، وتفعيل الربط المباشر بين المتبرعين وبنوك الدم في مختلف مناطق المملكة.\r\n\r\nوجاء توقيع الاتفاقية خلال لقاء رسمي ضم ممثلين من المنصة وبنك الدم، حيث تم التأكيد على أهمية العمل التكاملي في رفع كفاءة الإمداد الدموي، وتسهيل الوصول إلى المتبرعين المستعدين للتجاوب مع حالات الطوارئ والاحتياج المزمن.\r\n\r\nوتهدف الاتفاقية إلى:\r\n\r\nتطوير نظام رقمي موحّد لتبادل بيانات المتبرعين بين المنصة وبنك الدم.\r\n\r\nتنفيذ حملات ميدانية مشتركة في الأحياء والجامعات والمراكز التجارية.\r\n\r\nتسريع إجراءات التبرع عبر التسجيل المسبق وتوثيق التبرعات إلكترونيًا.\r\n\r\nرفع مستوى التوعية المجتمعية من خلال مواد تثقيفية وتفاعلية.\r\n\r\nإطلاق نظام تنبيهات ذكي عند وجود احتياج عاجل لفصائل نادرة.\r\n\r\nبناء قاعدة بيانات محدثة لدعم اتخاذ القرار في حالات الطوارئ.\r\n\r\nوأكد الطرفان أن هذه الخطوة تمثّل انطلاقة حقيقية نحو تكامل الجهود التقنية والميدانية، لتعزيز ثقافة التبرع الطوعي، وضمان وفرة الدم لجميع المستفيدين في القطاعين الحكومي والخاص، وفق معايير أمان وجودة عالية.",
+    "main_image": "news/articles/GbtT8fqXIAILD4N.jpg",
+    "status": "published",
+    "publish_time": "2025-06-13T23:35:25Z",
+    "created_at": "2025-06-13T23:35:39.183Z",
+    "updated_at": "2025-06-13T23:36:09.525Z"
+  }
+},
+{
+  "model": "news.newsattachment",
+  "pk": 1,
+  "fields": {
+    "article": 1,
+    "image": "news/attachments/pngtree-hand-drawn-creative-vector-love-blood-donation-day-png-image_2182864.jpg",
+    "uploaded_at": "2025-06-13T18:07:08.044Z"
+  }
+},
+{
+  "model": "news.newsattachment",
+  "pk": 2,
+  "fields": {
+    "article": 2,
+    "image": "news/attachments/2041935.jpeg",
+    "uploaded_at": "2025-06-13T18:28:24.032Z"
+  }
+},
+{
+  "model": "news.newsattachment",
+  "pk": 3,
+  "fields": {
+    "article": 2,
+    "image": "news/attachments/hml_ltbr_bldm_TTGBa5R.jpg",
+    "uploaded_at": "2025-06-13T18:50:05.973Z"
+  }
+},
+{
+  "model": "news.newsattachment",
+  "pk": 4,
+  "fields": {
+    "article": 2,
+    "image": "news/attachments/TipsForBloodDonation.jpg",
+    "uploaded_at": "2025-06-13T18:50:05.974Z"
+  }
+},
+{
+  "model": "news.newsattachment",
+  "pk": 5,
+  "fields": {
+    "article": 2,
+    "image": "news/attachments/12.jpg",
+    "uploaded_at": "2025-06-13T18:50:05.974Z"
+  }
+},
+{
+  "model": "news.newsattachment",
+  "pk": 6,
+  "fields": {
+    "article": 3,
+    "image": "news/attachments/GbtT8fqXIAILD4N.jpg",
+    "uploaded_at": "2025-06-13T23:35:39.184Z"
+  }
+},
+{
+  "model": "news.newsattachment",
+  "pk": 7,
+  "fields": {
+    "article": 3,
+    "image": "news/attachments/GbtT8fqXIAILD4N_NBJdDvy.jpg",
+    "uploaded_at": "2025-06-13T23:35:39.185Z"
+  }
+}

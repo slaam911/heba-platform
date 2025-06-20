@@ -1,0 +1,70 @@
+{% extends 'core/base.html' %}
+
+{% block title %}ملف بنك الدم - منصة هبة{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white text-center py-4">
+                    <h4 class="mb-0 fw-bold text-danger">بيانات بنك الدم</h4>
+                </div>
+                <div class="card-body p-4">
+                    <!-- معلومات بنك الدم -->
+                    <div class="mb-4">
+                        <h5 class="mb-3 fw-bold text-danger">معلومات بنك الدم</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-2"><strong>اسم بنك الدم:</strong> {{ profile.bloodbank_name }}</div>
+                            <div class="col-md-6 mb-2"><strong>اسم المستشفى:</strong> {{ profile.hospital_name }}</div>
+                            <div class="col-md-6 mb-2"><strong>المنطقة:</strong> {{ profile.get_region_display }}</div>
+                            <div class="col-md-6 mb-2"><strong>المدينة:</strong> {{ profile.city.name }}</div>
+                            <div class="col-md-6 mb-2"><strong>رقم التواصل:</strong> {{ profile.contact_number }}</div>
+                            <div class="col-md-12 mb-2"><strong>العنوان:</strong> {{ profile.address }}</div>
+                            <div class="col-md-12 mb-2">
+                                <strong>الموقع على الخريطة:</strong>
+                                {% if profile.map_location %}
+                                    <div id="map" style="height: 300px; border-radius: 10px; border: 1px solid #ddd;"></div>
+                                {% else %}
+                                    <span class="text-muted">لم يتم تحديد الموقع</span>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6 mb-2"><strong>أوقات العمل:</strong> {{ profile.working_hours }}</div>
+                            <div class="col-md-6 mb-2"><strong>تعليمات خاصة:</strong> {{ profile.special_instructions|default:'-' }}</div>
+                        </div>
+                    </div>
+                    <!-- معلومات مسؤول بنك الدم -->
+                    <div class="mb-4">
+                        <h5 class="mb-3 fw-bold text-danger">معلومات مسؤول بنك الدم</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-2"><strong>الاسم:</strong> {{ profile.manager_name }}</div>
+                            <div class="col-md-6 mb-2"><strong>رقم الهاتف:</strong> {{ profile.manager_phone }}</div>
+                            <div class="col-md-6 mb-2"><strong>البريد الإلكتروني:</strong> {{ profile.manager_email }}</div>
+                            <div class="col-md-6 mb-2"><strong>المسمى الوظيفي:</strong> {{ profile.manager_position }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if profile.map_location %}
+{% block extra_js %}
+<script>
+function initMap() {
+    var loc = "{{ profile.map_location }}".split(',');
+    var latlng = {lat: parseFloat(loc[0]), lng: parseFloat(loc[1])};
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: latlng,
+        zoom: 14
+    });
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map
+    });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+{% endblock %}
+{% endif %}
+{% endblock %} 

@@ -1,0 +1,95 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}{{ article.title }} - منصة هبة{% endblock %}
+
+{% block content %}
+<style>
+.news-attachments .news-attachment-img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin: 15px auto;
+    border-radius: 0;
+    border: 2px solid #f3f3f3;
+    background: #fff;
+    /* لا يوجد ظل أو تكبير أو حواف دائرية */
+}
+</style>
+<section class="news-detail py-5">
+    <div class="container">
+        <div class="mb-4">
+            <a href="{% url 'news:section' article.section.id %}" class="btn btn-outline-secondary">&larr; العودة إلى قسم {{ article.section.name }}</a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow border-primary mb-4">
+                    {% if article.main_image %}
+                    <img src="{{ article.main_image.url }}" class="card-img-top rounded-top" alt="{{ article.title }}" style="max-height:350px;object-fit:cover;">
+                    {% endif %}
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger bg-opacity-10 text-danger px-3 py-2" style="font-size:1rem;">{{ article.section.name }}</span>
+                            <span class="text-muted small"><i class="fas fa-calendar-alt me-1"></i> {{ article.publish_time|date:"Y-m-d H:i" }}</span>
+                        </div>
+                        <h1 class="card-title mb-3 fw-bold" style="color:#b30000; letter-spacing:0.5px; font-size:2.1rem;">{{ article.title }}</h1>
+                        {% if article.subtitle %}<h4 class="text-muted mb-3">{{ article.subtitle }}</h4>{% endif %}
+                        <!-- شريط المشاركة -->
+                        <div class="d-flex flex-wrap gap-2 align-items-center my-4">
+                            <span class="fw-bold">شارك الخبر:</span>
+                            <a href="https://wa.me/?text={{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-success btn-sm" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://x.com/intent/tweet?url={{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-dark btn-sm" title="تويتر"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-primary btn-sm" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-info btn-sm" title="تيليجرام"><i class="fab fa-telegram-plane"></i></a>
+                            <button onclick="copyLink()" class="btn btn-outline-secondary btn-sm" title="نسخ الرابط"><i class="fas fa-link"></i></button>
+                            <button onclick="window.print()" class="btn btn-outline-secondary btn-sm" title="طباعة الخبر"><i class="fas fa-print"></i></button>
+                            <button onclick="saveAsPDF()" class="btn btn-outline-danger btn-sm" title="حفظ كـ PDF"><i class="fas fa-file-pdf"></i></button>
+                        </div>
+                        <hr>
+                        <div class="news-content mb-4" style="white-space: pre-line;">
+                            {{ article.content|linebreaksbr }}
+                        </div>
+                        {% if attachments %}
+                        <div class="news-attachments mt-4">
+                            <h5 class="mb-3 fw-bold" style="color:#b30000; font-size:1.2rem;">صور مرفقة:</h5>
+                            {% for img in attachments %}
+                                <img src="{{ img.image.url }}" class="news-attachment-img" alt="صورة مرفقة">
+                            {% endfor %}
+                        </div>
+                        <!-- Modal لعرض الصورة بالحجم الطبيعي -->
+                        <div id="imageModal" class="modal fade" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content bg-white">
+                              <div class="modal-body p-0 position-relative">
+                                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                                <img id="modalImage" src="" class="img-fluid rounded w-100" style="max-height:80vh;object-fit:contain;" alt="صورة مرفقة">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="{% url 'news:section' article.section.id %}" class="btn btn-primary btn-lg"><i class="fas fa-list me-2"></i>جميع أخبار قسم {{ article.section.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href);
+    alert('تم نسخ رابط الخبر!');
+}
+function saveAsPDF() {
+    window.print();
+}
+// عرض الصورة بالحجم الطبيعي في نافذة منبثقة
+function openImageModal(url) {
+    document.getElementById('modalImage').src = url;
+    var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+    modal.show();
+}
+</script>
+{% endblock %} 

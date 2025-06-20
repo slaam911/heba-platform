@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% block title %}تم التسجيل بنجاح{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body text-center py-5">
+                    <h2 class="text-success fw-bold mb-4">🎉 شكرًا لانضمامك إلى منصة هبة!</h2>
+                    <p class="lead mb-4">تم إنشاء حسابك بنجاح. نحن سعداء بانضمامك إلى مجتمع المتبرعين بالدم.</p>
+                    <div class="alert alert-info fw-bold mb-4">
+                        لإكمال بياناتك والاستفادة من جميع الميزات، يرجى <a href="/users/{{ user.username }}/edit/" class="btn btn-danger fw-bold">الضغط هنا لإكمال الملف التعريفي</a>
+                    </div>
+                    <a href="/" class="btn btn-outline-secondary mt-3">العودة للصفحة الرئيسية</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

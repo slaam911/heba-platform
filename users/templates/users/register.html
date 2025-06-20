@@ -1,0 +1,334 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}إنشاء حساب جديد - منصة هبة{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">تسجيل حساب جديد</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post" id="registration-form">
+                        {% csrf_token %}
+                        
+                        {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {% for error in form.non_field_errors %}
+                            {{ error }}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <div class="row">
+                            <!-- البيانات الأساسية -->
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
+                                {{ form.username }}
+                                {% if form.username.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.username.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                                {% if form.username.help_text %}
+                                <small class="form-text text-muted">{{ form.username.help_text }}</small>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+                                {{ form.email }}
+                                {% if form.email.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.email.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.phone_number.id_for_label }}">{{ form.phone_number.label }}</label>
+                                {{ form.phone_number }}
+                                {% if form.phone_number.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.phone_number.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.user_type.id_for_label }}">{{ form.user_type.label }}</label>
+                                {{ form.user_type }}
+                                {% if form.user_type.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.user_type.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- البيانات الشخصية -->
+                            <div class="col-md-4 mb-3">
+                                <label for="{{ form.first_name.id_for_label }}">{{ form.first_name.label }}</label>
+                                {{ form.first_name }}
+                                {% if form.first_name.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.first_name.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="{{ form.middle_name.id_for_label }}">{{ form.middle_name.label }}</label>
+                                {{ form.middle_name }}
+                                {% if form.middle_name.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.middle_name.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}</label>
+                                {{ form.last_name }}
+                                {% if form.last_name.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.last_name.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="{{ form.age.id_for_label }}">{{ form.age.label }}</label>
+                                {{ form.age }}
+                                {% if form.age.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.age.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="{{ form.nationality.id_for_label }}">{{ form.nationality.label }}</label>
+                                {{ form.nationality }}
+                                {% if form.nationality.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.nationality.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="{{ form.blood_type.id_for_label }}">{{ form.blood_type.label }}</label>
+                                {{ form.blood_type }}
+                                {% if form.blood_type.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.blood_type.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.region.id_for_label }}">{{ form.region.label }}</label>
+                                {{ form.region }}
+                                {% if form.region.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.region.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.city.id_for_label }}">{{ form.city.label }}</label>
+                                {{ form.city }}
+                                {% if form.city.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.city.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- معلومات التبرع -->
+                            <div class="col-md-6 mb-3">
+                                <div class="form-check">
+                                    {{ form.has_donated_before }}
+                                    <label class="form-check-label" for="{{ form.has_donated_before.id_for_label }}">
+                                        {{ form.has_donated_before.label }}
+                                    </label>
+                                </div>
+                                {% if form.has_donated_before.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.has_donated_before.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <div class="form-check">
+                                    {{ form.has_chronic_diseases }}
+                                    <label class="form-check-label" for="{{ form.has_chronic_diseases.id_for_label }}">
+                                        {{ form.has_chronic_diseases.label }}
+                                    </label>
+                                </div>
+                                {% if form.has_chronic_diseases.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.has_chronic_diseases.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <label for="{{ form.chronic_diseases_details.id_for_label }}">{{ form.chronic_diseases_details.label }}</label>
+                                {{ form.chronic_diseases_details }}
+                                {% if form.chronic_diseases_details.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.chronic_diseases_details.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                                {% if form.chronic_diseases_details.help_text %}
+                                <small class="form-text text-muted">{{ form.chronic_diseases_details.help_text }}</small>
+                                {% endif %}
+                            </div>
+
+                            <!-- كلمة المرور -->
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.password1.id_for_label }}">{{ form.password1.label }}</label>
+                                {{ form.password1 }}
+                                {% if form.password1.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.password1.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                                {% if form.password1.help_text %}
+                                <small class="form-text text-muted">{{ form.password1.help_text }}</small>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="{{ form.password2.id_for_label }}">{{ form.password2.label }}</label>
+                                {{ form.password2 }}
+                                {% if form.password2.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.password2.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                                {% if form.password2.help_text %}
+                                <small class="form-text text-muted">{{ form.password2.help_text }}</small>
+                                {% endif %}
+                            </div>
+
+                            <!-- طريقة التحقق -->
+                            {% if form.verification_method %}
+                            <div class="col-12 mb-3">
+                                <label>{{ form.verification_method.label }}</label>
+                                <div class="d-flex gap-3">
+                                    {% for radio in form.verification_method %}
+                                    <div class="form-check">
+                                        {{ radio.tag }}
+                                        <label class="form-check-label" for="{{ radio.id_for_label }}">
+                                            {{ radio.choice_label }}
+                                        </label>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                {% if form.verification_method.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.verification_method.errors %}
+                                    {{ error }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">تسجيل</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const regionSelect = document.getElementById('{{ form.region.id_for_label }}');
+    const citySelect = document.getElementById('{{ form.city.id_for_label }}');
+    
+    function updateCities() {
+        const region = regionSelect.value;
+        if (!region) return;
+        
+        // إظهار مؤشر التحميل
+        citySelect.disabled = true;
+        citySelect.innerHTML = '<option value="">جاري التحميل...</option>';
+        
+        // إرسال طلب AJAX للحصول على المدن
+        fetch(`/api/cities/?region=${region}`)
+            .then(response => response.json())
+            .then(data => {
+                citySelect.innerHTML = '<option value="">اختر المدينة</option>';
+                data.forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city.id;
+                    option.textContent = city.name;
+                    citySelect.appendChild(option);
+                });
+                citySelect.disabled = false;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                citySelect.innerHTML = '<option value="">حدث خطأ في تحميل المدن</option>';
+                citySelect.disabled = false;
+            });
+    }
+    
+    // تحديث المدن عند تغيير المنطقة
+    regionSelect.addEventListener('change', updateCities);
+    
+    // تحديث المدن عند تحميل الصفحة
+    if (regionSelect.value) {
+        updateCities();
+    }
+});
+</script>
+{% endblock %}
+{% endblock %} 

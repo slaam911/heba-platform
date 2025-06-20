@@ -1,0 +1,290 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}إنشاء حساب جديد - منصة هبة{% endblock %}
+
+{% block extra_css %}
+<style>
+    .social-account {
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    .social-account .remove-account {
+        color: #dc3545;
+        cursor: pointer;
+    }
+    .avatar-preview {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #dee2e6;
+    }
+    .privacy-option {
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+    }
+    .privacy-option:hover {
+        background-color: #f8f9fa;
+    }
+    .privacy-option.selected {
+        border-color: #0d6efd;
+        background-color: #f8f9fa;
+    }
+    .btn-register-custom {
+        background: #b30000;
+        color: #fff;
+        border-radius: 8px;
+        font-weight: 500;
+        padding: 0.7rem 2.5rem;
+        font-size: 1.15rem;
+        border: none;
+        transition: background 0.2s, color 0.2s;
+    }
+    .btn-register-custom:hover,
+    .btn-register-custom:focus,
+    .btn-register-custom:active {
+        background: #888 !important;
+        color: #fff !important;
+    }
+    .label-red-bold {
+        color: #b30000;
+        font-weight: bold;
+        font-size: 1.07rem;
+        margin-bottom: 0.3rem;
+        display: block;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white text-center py-4">
+                    <h4 class="mb-0 fw-bold text-danger">إنشاء حساب جديد</h4>
+                    <p class="text-muted mb-0">يرجى تعبئة جميع البيانات بدقة</p>
+                </div>
+                <div class="card-body p-4">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} text-center fw-bold">{{ message|safe }}</div>
+                        {% endfor %}
+                    {% endif %}
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger text-center fw-bold mb-4" style="font-size:1.1rem;">
+                            <i class="fas fa-exclamation-triangle me-2"></i> يرجى تصحيح الأخطاء أدناه.
+                        </div>
+                    {% endif %}
+                    <form method="post" enctype="multipart/form-data" novalidate>
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <label for="{{ form.username.id_for_label }}" class="label-red-bold">{{ form.username.label }}</label>
+                                {{ form.username|add_class:'form-control' }}
+                                {% if form.username.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.username.errors %}{{ error }}{% endfor %}
+                                </div>
+                                {% endif %}
+                                {% if form.username.help_text %}
+                                <small class="form-text text-muted">{{ form.username.help_text }}</small>
+                                {% endif %}
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="{{ form.email.id_for_label }}" class="label-red-bold">{{ form.email.label }}</label>
+                                {{ form.email|add_class:'form-control' }}
+                                {% if form.email.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.email.errors %}{{ error }}{% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="{{ form.phone_number.id_for_label }}" class="label-red-bold">{{ form.phone_number.label }}</label>
+                                {{ form.phone_number|add_class:'form-control' }}
+                                {% if form.phone_number.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.phone_number.errors %}{{ error }}{% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label for="{{ form.password1.id_for_label }}" class="label-red-bold">{{ form.password1.label }}</label>
+                                {{ form.password1|add_class:'form-control' }}
+                                {% if form.password1.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.password1.errors %}{{ error }}{% endfor %}
+                                </div>
+                                {% endif %}
+                                {% if form.password1.help_text %}
+                                <small class="form-text text-muted">{{ form.password1.help_text }}</small>
+                                {% endif %}
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label for="{{ form.password2.id_for_label }}" class="label-red-bold">{{ form.password2.label }}</label>
+                                {{ form.password2|add_class:'form-control' }}
+                                {% if form.password2.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.password2.errors %}{{ error }}{% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-register-custom btn-lg">تسجيل</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // معاينة الصورة الرمزية
+    const avatarInput = document.querySelector('#id_avatar');
+    const avatarPreview = document.querySelector('#avatar-preview');
+    
+    avatarInput.addEventListener('change', function() {
+        if (this.files && this.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                avatarPreview.src = e.target.result;
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+
+    // تحديث قائمة المدن عند تغيير المنطقة
+    const regionSelect = document.querySelector('#id_region');
+    const citySelect = document.querySelector('#id_city');
+    
+    regionSelect.addEventListener('change', function() {
+        const region = this.value;
+        fetch(`/api/cities/?region=${region}`)
+            .then(response => response.json())
+            .then(data => {
+                citySelect.innerHTML = '<option value="">اختر المدينة</option>';
+                data.forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city.id;
+                    option.textContent = city.name;
+                    citySelect.appendChild(option);
+                });
+            });
+    });
+
+    // إدارة حسابات التواصل الاجتماعي
+    const socialAccountsContainer = document.querySelector('#social-accounts-container');
+    const addSocialAccountBtn = document.querySelector('#add-social-account');
+    const socialAccountsInput = document.querySelector('#id_social_accounts');
+    let socialAccounts = {};
+
+    function updateSocialAccountsInput() {
+        socialAccountsInput.value = JSON.stringify(socialAccounts);
+    }
+
+    function createSocialAccountElement(platform, username) {
+        const div = document.createElement('div');
+        div.className = 'social-account';
+        div.innerHTML = `
+            <div class="row">
+                <div class="col-md-5">
+                    <select class="form-select platform-select">
+                        <option value="">اختر المنصة</option>
+                        <option value="twitter" ${platform === 'twitter' ? 'selected' : ''}>تويتر</option>
+                        <option value="instagram" ${platform === 'instagram' ? 'selected' : ''}>انستغرام</option>
+                        <option value="facebook" ${platform === 'facebook' ? 'selected' : ''}>فيسبوك</option>
+                        <option value="linkedin" ${platform === 'linkedin' ? 'selected' : ''}>لينكد إن</option>
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control username-input" 
+                           placeholder="اسم المستخدم" value="${username || ''}">
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-danger remove-account">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+
+        const platformSelect = div.querySelector('.platform-select');
+        const usernameInput = div.querySelector('.username-input');
+        const removeBtn = div.querySelector('.remove-account');
+
+        platformSelect.addEventListener('change', function() {
+            const oldPlatform = Object.keys(socialAccounts).find(p => 
+                socialAccounts[p] === usernameInput.value
+            );
+            if (oldPlatform) {
+                delete socialAccounts[oldPlatform];
+            }
+            if (this.value && usernameInput.value) {
+                socialAccounts[this.value] = usernameInput.value;
+            }
+            updateSocialAccountsInput();
+        });
+
+        usernameInput.addEventListener('input', function() {
+            const platform = platformSelect.value;
+            if (platform) {
+                socialAccounts[platform] = this.value;
+                updateSocialAccountsInput();
+            }
+        });
+
+        removeBtn.addEventListener('click', function() {
+            const platform = platformSelect.value;
+            if (platform) {
+                delete socialAccounts[platform];
+            }
+            div.remove();
+            updateSocialAccountsInput();
+        });
+
+        return div;
+    }
+
+    addSocialAccountBtn.addEventListener('click', function() {
+        const div = createSocialAccountElement();
+        socialAccountsContainer.appendChild(div);
+    });
+
+    // إدارة خيارات الخصوصية
+    const privacyOptions = document.querySelectorAll('.privacy-option');
+    privacyOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const radio = this.querySelector('input[type="radio"]');
+            radio.checked = true;
+            privacyOptions.forEach(opt => opt.classList.remove('selected'));
+            this.classList.add('selected');
+        });
+    });
+
+    // تحميل حسابات التواصل الاجتماعي الموجودة
+    try {
+        const existingAccounts = JSON.parse(socialAccountsInput.value || '{}');
+        Object.entries(existingAccounts).forEach(([platform, username]) => {
+            const div = createSocialAccountElement(platform, username);
+            socialAccountsContainer.appendChild(div);
+        });
+        socialAccounts = existingAccounts;
+    } catch (e) {
+        console.error('Error parsing social accounts:', e);
+    }
+});
+</script>
+{% endblock %} 

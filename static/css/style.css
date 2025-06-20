@@ -1,0 +1,239 @@
+/* Custom Styles */
+:root {
+    --primary-color: #e63946;
+    --secondary-color: #1d3557;
+    --dark-color: #1d3557;
+}
+
+/* General Styles */
+body, h1, h2, h3, h4, h5, h6, .section-title, .card-title, .btn, .navbar, .nav-link, .custom-card, .stats-card {
+    font-family: 'Tajawal', Arial, Helvetica, sans-serif !important;
+    background-color: var(--light-color);
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d62839;
+    border-color: #d62839;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.btn-details {
+    font-weight: 500;
+    color: #fff !important;
+    border: 2px solid #b30000 !important;
+    border-radius: 12px;
+    background: #b30000;
+    transition: all 0.2s;
+    box-shadow: none;
+    padding: 0.5rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-details:hover, .btn-details:focus {
+    background: #8c0000;
+    color: #fff !important;
+    border-color: #8c0000 !important;
+    transform: scale(1.04);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Form Styles */
+.form-control {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.25);
+}
+
+.form-select {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-check-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.25);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #d62839 100%);
+    padding: 5rem 0;
+}
+
+.hero h1 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Statistics Section */
+.statistics .card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.statistics .card i {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.statistics .card-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Campaign Cards */
+.campaign-card {
+    height: 100%;
+}
+
+.campaign-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.campaign-card .card-body {
+    padding: 1.5rem;
+}
+
+.campaign-card .badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+/* How It Works Section */
+.how-it-works {
+    background-color: #f8f9fa;
+}
+
+.how-it-works .card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.how-it-works .card i {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #b30000 !important;
+    color: white;
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.footer h5 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding: 3rem 0;
+    }
+    
+    .hero img {
+        margin-top: 2rem;
+    }
+    
+    .statistics .card {
+        margin-bottom: 1rem;
+    }
+}
+
+.custom-card .blood-type-badge {
+    transition: background 0.25s, color 0.25s;
+}
+.custom-card:hover .blood-type-badge {
+    background: #888 !important;
+    color: #fff !important;
+} 

@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block title %}لا يوجد ملف بنك دم{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm text-center">
+                <div class="card-body py-5">
+                    <div class="mb-4">
+                        <i class="fas fa-exclamation-circle fa-4x text-danger"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3 text-danger">لا يوجد ملف بنك دم</h3>
+                    <p class="text-muted mb-4">لم تقم بتسجيل بيانات بنك دم بعد. يمكنك التسجيل من خلال صفحة التسجيل.</p>
+                    <a href="{% url 'users:register_bloodbank' %}" class="btn btn-danger btn-lg">تسجيل بنك دم</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
